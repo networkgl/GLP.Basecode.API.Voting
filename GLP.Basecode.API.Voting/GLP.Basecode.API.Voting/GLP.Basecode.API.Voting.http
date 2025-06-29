@@ -1,0 +1,6 @@
+@GLP.Basecode.API.Voting_HostAddress = http://localhost:5047
+
+GET {{GLP.Basecode.API.Voting_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

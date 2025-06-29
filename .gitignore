@@ -1,0 +1,6 @@
+# Sensitive config files
+database.txt
+scaffold.txt
+*.bak
+appsettings.json
+
