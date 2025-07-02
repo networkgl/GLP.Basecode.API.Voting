@@ -37,6 +37,24 @@ namespace GLP.Basecode.API.Voting.Manager
             return await _userRoleRepo.GetAllAsync();
         }
 
+        public async Task<UsersWithRoleModel?> GetUserByUsername(string username)
+        {
+            //return await _userRepo.FindAsyncByPredicate(u => u.Username == username);
+
+            var query = from user in _dbContext.Users
+                        join role in _dbContext.Roles on user.RoleId equals role.RoleId
+                        select new UsersWithRoleModel
+                        {
+                            UserId = user.UserId,
+                            RoleId = role.RoleId,
+                            Username = user.Username,
+                            RoleName = role.RoleName
+                        };
+
+            return await query.FirstOrDefaultAsync();
+        }
+
+
         public async Task<OperationResult<ErrorCode>> SendOTPForgotPassword(ForgotPasswordViewInputModel model)
         {
             var opRes = new OperationResult<ErrorCode>();
@@ -97,9 +115,17 @@ namespace GLP.Basecode.API.Voting.Manager
             }
 
             var hasher = new PasswordHasher<User>();
-            var result = hasher.VerifyHashedPassword(user, user.Password, model.Password);
+            //var result = hasher.VerifyHashedPassword(user, user.Password, model.Password);
 
-            if (result == PasswordVerificationResult.Failed){
+            //if (result == PasswordVerificationResult.Failed){
+            //    logRes.Result = LoginResult.InvalidPassword;
+            //    logRes.Message = LoginResultMessageResponse.INVALID_PASSWORD;
+
+            //    return logRes;
+            //}
+
+            if (user.Password != model.Password)
+            {
                 logRes.Result = LoginResult.InvalidPassword;
                 logRes.Message = LoginResultMessageResponse.INVALID_PASSWORD;
 
@@ -116,6 +142,7 @@ namespace GLP.Basecode.API.Voting.Manager
         public async Task<AccountCreationResponse> CreateStudentAccount(CreateAccountViewInputModel model)
         {
             var accRes = new AccountCreationResponse();
+
 
             // Check for duplicate ID Number
             var hasExisted = await _studentRepo.FindAsyncByPredicate(s => s.IdNumber == model.IdNumber);

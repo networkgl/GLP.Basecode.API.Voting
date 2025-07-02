@@ -167,3 +167,4 @@ E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Votin
 E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\obj\Debug\net8.0\GLP.Basecode.API.Voting.pdb
 E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\obj\Debug\net8.0\GLP.Basecode.API.Voting.genruntimeconfig.cache
 E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\obj\Debug\net8.0\ref\GLP.Basecode.API.Voting.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
