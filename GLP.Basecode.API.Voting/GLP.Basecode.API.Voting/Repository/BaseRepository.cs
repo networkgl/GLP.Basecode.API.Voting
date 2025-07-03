@@ -14,9 +14,9 @@ namespace GLP.Basecode.API.Voting.Repository
         private DbSet<T> _table;
         private readonly ExceptionHandlerMessage _errMsg;
 
-        public BaseRepository()
+        public BaseRepository(VotingAppDbContext dbContext)
         {
-            _db = new VotingAppDbContext();
+            _db = dbContext; // use DI-provided instance
             _table = _db.Set<T>();
             _errMsg = new ExceptionHandlerMessage();
         }
@@ -93,7 +93,7 @@ namespace GLP.Basecode.API.Voting.Repository
                     _db.Entry(oldEntity).CurrentValues.SetValues(entity);
                     await _db.SaveChangesAsync();
                     opRes.SuccessMessage = OperationResultMessageResponse.UPDATED;
-                    opRes.Data = ErrorCode.Success;
+                    opRes.Status = ErrorCode.Success;
 
                     return opRes;
                 }

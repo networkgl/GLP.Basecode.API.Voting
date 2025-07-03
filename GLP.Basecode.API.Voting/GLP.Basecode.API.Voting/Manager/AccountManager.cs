@@ -32,29 +32,33 @@ namespace GLP.Basecode.API.Voting.Manager
             _userRoleRepo = userRole;
         }
 
+        //tested
         public async Task<List<Role>> GetAllRoles()
         {
             return await _userRoleRepo.GetAllAsync();
         }
 
+        //tested
         public async Task<UsersWithRoleModel?> GetUserByUsername(string username)
         {
             //return await _userRepo.FindAsyncByPredicate(u => u.Username == username);
 
-            var query = from user in _dbContext.Users
-                        join role in _dbContext.Roles on user.RoleId equals role.RoleId
-                        select new UsersWithRoleModel
-                        {
-                            UserId = user.UserId,
-                            RoleId = role.RoleId,
-                            Username = user.Username,
-                            RoleName = role.RoleName
-                        };
+            var retVal = await (from user in _dbContext.Users
+                                join role in _dbContext.Roles on user.RoleId equals role.RoleId
+                                where user.Username.Trim().ToLower() == username.Trim().ToLower()
+                                select new UsersWithRoleModel
+                                {
+                                    UserId = user.UserId,
+                                    RoleId = role.RoleId,
+                                    Username = user.Username,
+                                    RoleName = role.RoleName
+                                }).FirstOrDefaultAsync();
 
-            return await query.FirstOrDefaultAsync();
+
+            return retVal;
         }
 
-
+        //tested
         public async Task<OperationResult<ErrorCode>> SendOTPForgotPassword(ForgotPasswordViewInputModel model)
         {
             var opRes = new OperationResult<ErrorCode>();
@@ -68,11 +72,16 @@ namespace GLP.Basecode.API.Voting.Manager
             }
 
             //SENDING EMAIL HAPPEN HERE...
-            var otp = OTPGenerator.code.ToString();
+            var otp = OTPGenerator.Generate().ToString(); 
             var subject = "Your OTP Code for Password Reset";
-            var body = $"<p>Hello,</p><p>Your OTP code is: <strong>{otp}</strong></p>";
+            string templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Template", "EmailTemplate.html");
+            string body = File.ReadAllText(templatePath)
+                              .Replace("{{OTP}}", otp)
+                              .Replace("{{YEAR}}", TimeZoneConverter.ConvertTimeZone(DateTime.UtcNow).Year.ToString());
 
-            var (sent, message) = await _mailManager.SendEmailAsync(model.UserEmail, subject, body);
+            //var body = $"<p>Hello,</p><p>Your OTP code is: <strong>{otp}</strong></p>";
+
+            var (sent, message) = await _mailManager.SendEmailAsync(subject, body, model.UserEmail);
 
             if (!sent)
             {
@@ -95,12 +104,14 @@ namespace GLP.Basecode.API.Voting.Manager
                 return opRes;
             }
 
-            opRes.SuccessMessage = message; //
-            opRes.Status = ErrorCode.Success;
+
+            opRes.SuccessMessage = message + MaskEmail.Mask(model.UserEmail); //
+            opRes.Status = userUpdate.Status;
 
             return opRes;
         }
 
+        //tested
         public async Task<LoginResultResponse> CheckUserCredentials(LoginViewInputModel model)
         {
             var logRes = new LoginResultResponse();
@@ -139,17 +150,26 @@ namespace GLP.Basecode.API.Voting.Manager
             return logRes;
         }
 
+        //tested
         public async Task<AccountCreationResponse> CreateStudentAccount(CreateAccountViewInputModel model)
         {
             var accRes = new AccountCreationResponse();
 
-
             // Check for duplicate ID Number
-            var hasExisted = await _studentRepo.FindAsyncByPredicate(s => s.IdNumber == model.IdNumber);
-            if (hasExisted is not null)
+            var hasExistedStudentId = await _studentRepo.FindAsyncByPredicate(s => s.IdNumber == model.IdNumber);
+            if (hasExistedStudentId is not null)
             {
-                accRes.Message = AccountCreationMessageResponse.DUPLICATE;
+                accRes.Message = AccountCreationMessageResponse.DUPLICATE_USER;
                 accRes.Result = AccountCreationResult.DuplicateIdNumber;
+                return accRes;
+            }
+
+            // Check for duplicate User Email
+            var hasExistedUserEmail = await _userRepo.FindAsyncByPredicate(s => s.UserEmail == model.UserEmail);
+            if (hasExistedUserEmail is not null)
+            {
+                accRes.Message = AccountCreationMessageResponse.DUPLICATE_USER_EMAIL;
+                accRes.Result = AccountCreationResult.DuplicateEmail;
                 return accRes;
             }
 
@@ -178,7 +198,7 @@ namespace GLP.Basecode.API.Voting.Manager
                 var user = new User
                 {
                     Username = model.IdNumber.ToString(),
-                    Password = model.IdNumber.ToString(),
+                    Password = model.IdNumber.ToString(), //Initially not hashed..
                     UserEmail = model.UserEmail,
                     StudentId = student.StudentId,
                     RoleId = (byte)RoleType.Student

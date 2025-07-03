@@ -49,7 +49,12 @@ public partial class VotingAppDbContext : DbContext
         modelBuilder.Entity<Candidate>(entity =>
         {
             entity.Property(e => e.CandidateId).HasColumnName("candidateId");
+            entity.Property(e => e.FilePathId).HasColumnName("filePathId");
             entity.Property(e => e.PartyListId).HasColumnName("partyListId");
+
+            entity.HasOne(d => d.FilePath).WithMany(p => p.Candidates)
+                .HasForeignKey(d => d.FilePathId)
+                .HasConstraintName("FK_Candidates_FilePaths");
 
             entity.HasOne(d => d.PartyList).WithMany(p => p.Candidates)
                 .HasForeignKey(d => d.PartyListId)
@@ -98,22 +103,7 @@ public partial class VotingAppDbContext : DbContext
         modelBuilder.Entity<FilePath>(entity =>
         {
             entity.Property(e => e.FilePathId).HasColumnName("filePathId");
-            entity.Property(e => e.CandidateId).HasColumnName("candidateId");
-            entity.Property(e => e.PartyListId).HasColumnName("partyListId");
             entity.Property(e => e.Path).HasColumnName("path");
-            entity.Property(e => e.UserId).HasColumnName("userId");
-
-            entity.HasOne(d => d.Candidate).WithMany(p => p.FilePaths)
-                .HasForeignKey(d => d.CandidateId)
-                .HasConstraintName("FK_FilePaths_Candidates");
-
-            entity.HasOne(d => d.PartyList).WithMany(p => p.FilePaths)
-                .HasForeignKey(d => d.PartyListId)
-                .HasConstraintName("FK_FilePaths_PartyLists");
-
-            entity.HasOne(d => d.User).WithMany(p => p.FilePaths)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK_FilePaths_Users");
         });
 
         modelBuilder.Entity<Notification>(entity =>
@@ -140,10 +130,16 @@ public partial class VotingAppDbContext : DbContext
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("createdAt");
+            entity.Property(e => e.FilePathId).HasColumnName("filePathId");
             entity.Property(e => e.IsCompleted).HasColumnName("isCompleted");
             entity.Property(e => e.PartyListName)
                 .HasMaxLength(100)
                 .HasColumnName("partyListName");
+
+            entity.HasOne(d => d.FilePath).WithMany(p => p.PartyLists)
+                .HasForeignKey(d => d.FilePathId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_PartyLists_FilePaths");
         });
 
         modelBuilder.Entity<Position>(entity =>
@@ -220,6 +216,7 @@ public partial class VotingAppDbContext : DbContext
         modelBuilder.Entity<User>(entity =>
         {
             entity.Property(e => e.UserId).HasColumnName("userId");
+            entity.Property(e => e.FilePathId).HasColumnName("filePathId");
             entity.Property(e => e.IsVoted).HasColumnName("isVoted");
             entity.Property(e => e.Password).HasColumnName("password");
             entity.Property(e => e.RoleId).HasColumnName("roleId");
@@ -235,6 +232,10 @@ public partial class VotingAppDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("verifiedAt");
 
+            entity.HasOne(d => d.FilePath).WithMany(p => p.Users)
+                .HasForeignKey(d => d.FilePathId)
+                .HasConstraintName("FK_Users_FilePaths");
+
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -242,7 +243,6 @@ public partial class VotingAppDbContext : DbContext
 
             entity.HasOne(d => d.Student).WithMany(p => p.Users)
                 .HasForeignKey(d => d.StudentId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Users_Students");
         });
 

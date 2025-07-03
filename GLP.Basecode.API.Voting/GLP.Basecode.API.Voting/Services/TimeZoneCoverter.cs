@@ -38,9 +38,5 @@
         {
             return TimeZoneInfo.ConvertTimeFromUtc(dateTimeUtc, timeZone);
         }
-
-
-
-
     }
 }

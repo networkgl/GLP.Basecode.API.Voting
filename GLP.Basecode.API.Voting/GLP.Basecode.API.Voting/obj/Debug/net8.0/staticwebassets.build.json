@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "fWIS4oF7lgNgjRhhi1CIrmBDkT6zBNfqZoUL7NKkFDw=",
+  "Hash": "RZZiK+3vHB2oOQ9CKOMNeFtxFepsFQVAScSKg4SxRx4=",
   "Source": "GLP.Basecode.API.Voting",
   "BasePath": "_content/GLP.Basecode.API.Voting",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "GLP.Basecode.API.Voting\\wwwroot",
+      "Source": "GLP.Basecode.API.Voting",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS\\6ee8598d-e4cd-4d43-85ed-421645bb64a7.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/PINS/6ee8598d-e4cd-4d43-85ed-421645bb64a7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS\\6ee8598d-e4cd-4d43-85ed-421645bb64a7.png"
+    }
+  ]
 }

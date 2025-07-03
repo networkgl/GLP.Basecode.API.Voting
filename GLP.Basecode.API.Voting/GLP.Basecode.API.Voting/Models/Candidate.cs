@@ -9,7 +9,9 @@ public partial class Candidate
 
     public long PartyListId { get; set; }
 
-    public virtual ICollection<FilePath> FilePaths { get; set; } = new List<FilePath>();
+    public long? FilePathId { get; set; }
+
+    public virtual FilePath? FilePath { get; set; }
 
     public virtual PartyList PartyList { get; set; } = null!;
 

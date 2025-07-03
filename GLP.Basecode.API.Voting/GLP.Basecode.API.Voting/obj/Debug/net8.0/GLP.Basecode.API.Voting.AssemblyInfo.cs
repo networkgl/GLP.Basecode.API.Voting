@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GLP.Basecode.API.Voting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9248a8359e294ae7ec6eab233c7ad5177984fe14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5938eb494d840170e19a2fa0ec43138f460378f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GLP.Basecode.API.Voting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GLP.Basecode.API.Voting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

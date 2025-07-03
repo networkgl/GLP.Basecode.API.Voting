@@ -13,7 +13,9 @@ public partial class PartyList
 
     public bool? IsCompleted { get; set; }
 
+    public long FilePathId { get; set; }
+
     public virtual ICollection<Candidate> Candidates { get; set; } = new List<Candidate>();
 
-    public virtual ICollection<FilePath> FilePaths { get; set; } = new List<FilePath>();
+    public virtual FilePath FilePath { get; set; } = null!;
 }

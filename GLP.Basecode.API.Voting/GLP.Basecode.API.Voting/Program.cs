@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using System.Security.Claims;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 
 // Register JWT settings
@@ -35,8 +37,10 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = jwtSettings.Issuer,
         ValidAudience = jwtSettings.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key))
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key)),
+        RoleClaimType = ClaimTypes.Role 
     };
+
 });
 
 //Enabling Authorize in Swaggers
@@ -75,7 +79,6 @@ builder.Services.AddSwaggerGen(options =>
 
 
 
-
 // Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -84,12 +87,17 @@ builder.Services.AddSwaggerGen();
 // Configure strongly typed MailSettings
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
-// Register application services
+// Stateless utility class: safe to use transient
 builder.Services.AddTransient<MailManager>();
-builder.Services.AddScoped<AccountManager>();
+builder.Services.AddTransient<ImageFilePath>();
 
-// Register repositories
-builder.Services.AddScoped(typeof(BaseRepository<>));// generic repo
+// Manager classes: correctly scoped
+builder.Services.AddScoped<AccountManager>();
+builder.Services.AddScoped<PartyListManager>();
+
+// Generic repository: correctly scoped
+builder.Services.AddScoped(typeof(BaseRepository<>));
+
 
 // Register DbContext
 builder.Services.AddDbContext<VotingAppDbContext>(options =>
@@ -107,5 +115,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication();//middle ware
 app.UseAuthorization();
+app.UseStaticFiles();
 app.MapControllers();
 app.Run();

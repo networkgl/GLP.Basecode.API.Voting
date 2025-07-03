@@ -3,48 +3,112 @@
   "WorkspaceRootPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\manager\\partylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\manager\\partylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\manager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\manager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\controllers\\partylistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\controllers\\partylistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\timezonecoverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\timezonecoverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\votingappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\votingappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\loginviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\loginviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\partylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\partylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\userswithrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\userswithrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\handler\\loginresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\handler\\loginresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\imagefilepath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\imagefilepath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\handler\\accountcreationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\handler\\accountcreationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\createpartylistviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\createpartylistviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\handler\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\handler\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\constant\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\constant\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\createaccountviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\createaccountviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\userswithrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\userswithrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\loginviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\loginviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\mailmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\mailmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\template\\emailtemplate.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\template\\emailtemplate.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\timezonecoverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\timezonecoverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\maskemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\maskemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\otpgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\otpgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\forgotpasswordviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\forgotpasswordviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\handler\\loginresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\handler\\loginresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\handler\\exceptionhandlermessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,36 +119,8 @@
       "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\glp.basecode.api.voting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\mailmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\mailmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\forgotpasswordviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\forgotpasswordviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\services\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\services\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\handler\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\handler\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\votingappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\votingappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\constant\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\constant\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\createaccountviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|solutionrelative:glp.basecode.api.voting\\models\\custommodel\\createaccountviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E988DA58-02E7-4698-9C59-875BD1FD7235}|GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj|e:\\github\\glp.basecode.api.voting\\glp.basecode.api.voting\\glp.basecode.api.voting\\models\\custommodel\\verificationotpviewinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,17 +134,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Controllers\\AccountController.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Controllers\\AccountController.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAASwCAAAAAiAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAgwG4AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T19:03:00.446Z",
               "IsPinned": true,
@@ -122,15 +158,15 @@
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Manager\\AccountManager.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Manager\\AccountManager.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Manager\\AccountManager.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAewHQAAAAMAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T19:18:53.076Z",
+              "WhenOpened": "2025-07-03T08:08:30.458Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "IBaseRepository.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Interfaces\\IBaseRepository.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Interfaces\\IBaseRepository.cs",
@@ -144,13 +180,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Repository\\BaseRepository.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Repository\\BaseRepository.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Repository\\BaseRepository.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Repository\\BaseRepository.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAUwAwAAAAeAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAMwCEAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T19:33:57.645Z",
               "IsPinned": true,
@@ -158,13 +194,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 12,
               "Title": "OperationResult.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Handler\\OperationResult.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Handler\\OperationResult.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Handler\\OperationResult.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Handler\\OperationResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T19:48:29.342Z",
               "IsPinned": true,
@@ -172,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 26,
               "Title": "LoginResultResponse.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Handler\\LoginResultResponse.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Handler\\LoginResultResponse.cs",
@@ -186,13 +222,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "PartyListController.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Controllers\\PartyListController.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Controllers\\PartyListController.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Controllers\\PartyListController.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Controllers\\PartyListController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T11:48:26.565Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PartyListManager.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Manager\\PartyListManager.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Manager\\PartyListManager.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Manager\\PartyListManager.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Manager\\PartyListManager.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAApwA8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T11:55:55.241Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AccountCreationResponse.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Handler\\AccountCreationResponse.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Handler\\AccountCreationResponse.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Handler\\AccountCreationResponse.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Handler\\AccountCreationResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T08:40:06.364Z",
               "IsPinned": true,
@@ -200,13 +264,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "MailManager.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\MailManager.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\MailManager.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\MailManager.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Services\\MailManager.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAD4vwsAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T09:52:30.837Z",
               "IsPinned": true,
@@ -214,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 29,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\MailSettings.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\MailSettings.cs",
@@ -234,7 +298,7 @@
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\appsettings.json",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\appsettings.json",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\appsettings.json",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswBUAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-28T19:00:14.317Z",
               "IsPinned": true,
@@ -242,13 +306,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Program.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Program.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Program.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAewBYAAAABAAAA",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAtwF4AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T10:00:14.821Z",
               "IsPinned": true,
@@ -256,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 22,
               "Title": "JwtService.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\JwtService.cs",
@@ -270,85 +334,190 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "ImageFilePath.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\ImageFilePath.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\ImageFilePath.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\ImageFilePath.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Services\\ImageFilePath.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAMwCcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T12:43:33.049Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PartyList.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\PartyList.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\PartyList.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\PartyList.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\PartyList.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAqwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T12:09:52.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreatePartyListViewInputModel.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\CreatePartyListViewInputModel.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\CreatePartyListViewInputModel.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\CreatePartyListViewInputModel.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\CustomModel\\CreatePartyListViewInputModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T11:50:36.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "TimeZoneCoverter.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\TimeZoneCoverter.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\TimeZoneCoverter.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\TimeZoneCoverter.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Services\\TimeZoneCoverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAvwCkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T20:15:00.049Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "UsersWithRoleModel.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\UsersWithRoleModel.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\UsersWithRoleModel.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\UsersWithRoleModel.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\CustomModel\\UsersWithRoleModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T19:20:04.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GLP.Basecode.API.Voting",
-              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
-              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
-              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
-              "RelativeToolTip": "GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-29T13:30:33.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CreateAccountViewInputModel.cs",
-              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
-              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
-              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
-              "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAwwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T21:31:25.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "VotingAppDbContext.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAhwIoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:12:01.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "LoginViewInputModel.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\LoginViewInputModel.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\LoginViewInputModel.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\LoginViewInputModel.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\CustomModel\\LoginViewInputModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T20:39:44.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 14,
+              "Title": "CreateAccountViewInputModel.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\CustomModel\\CreateAccountViewInputModel.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowBsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T21:31:25.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Enums.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Constant\\Enums.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Constant\\Enums.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Constant\\Enums.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Constant\\Enums.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAtwBMAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T19:50:50.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 25,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\appsettings.Development.json",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\appsettings.Development.json",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-03T07:31:01.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OTPGenerator.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\OTPGenerator.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\OTPGenerator.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\OTPGenerator.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Services\\OTPGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T07:55:48.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MaskEmail.cs",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\MaskEmail.cs",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Services\\MaskEmail.cs",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Services\\MaskEmail.cs",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Services\\MaskEmail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T08:09:18.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EmailTemplate.html",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Template\\EmailTemplate.html",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Template\\EmailTemplate.html",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Template\\EmailTemplate.html",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\Template\\EmailTemplate.html",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-03T08:19:18.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GLP.Basecode.API.Voting.csproj",
+              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
+              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
+              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
+              "RelativeToolTip": "GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-29T13:30:33.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "ExceptionHandlerMessage.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Handler\\ExceptionHandlerMessage.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Handler\\ExceptionHandlerMessage.cs",
@@ -361,20 +530,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "ForgotPasswordViewInputModel.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\ForgotPasswordViewInputModel.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\ForgotPasswordViewInputModel.cs",
               "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\ForgotPasswordViewInputModel.cs",
               "RelativeToolTip": "GLP.Basecode.API.Voting\\Models\\CustomModel\\ForgotPasswordViewInputModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T19:15:38.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "VerificationOtpViewInputModel.cs",
               "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\Models\\CustomModel\\VerificationOtpViewInputModel.cs",
               "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\Models\\CustomModel\\VerificationOtpViewInputModel.cs",
@@ -383,19 +552,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T19:15:35.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "VotingAppDbContext.cs",
-              "DocumentMoniker": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
-              "RelativeDocumentMoniker": "GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
-              "ToolTip": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
-              "RelativeToolTip": "GLP.Basecode.API.Voting\\VotingAppDbContext.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAawA0AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T19:12:01.508Z",
               "EditorCaption": ""
             }
           ]

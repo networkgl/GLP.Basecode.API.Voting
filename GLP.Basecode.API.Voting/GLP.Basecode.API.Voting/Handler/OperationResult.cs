@@ -15,6 +15,7 @@ namespace GLP.Basecode.API.Voting.Handler
         public const string ADDED = "Data successfully added.";
         public const string UPDATED = "Data successfully updated.";
         public const string DELETED = "Data successfully deleted.";
+        public const string DUPLICATE = "Error: Data is already exist.";
 
         public static string NOT_FOUND(string tableName, object id) 
         {

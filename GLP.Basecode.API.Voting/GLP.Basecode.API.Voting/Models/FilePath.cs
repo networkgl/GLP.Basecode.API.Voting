@@ -9,15 +9,9 @@ public partial class FilePath
 
     public string Path { get; set; } = null!;
 
-    public long? UserId { get; set; }
+    public virtual ICollection<Candidate> Candidates { get; set; } = new List<Candidate>();
 
-    public long? CandidateId { get; set; }
+    public virtual ICollection<PartyList> PartyLists { get; set; } = new List<PartyList>();
 
-    public long? PartyListId { get; set; }
-
-    public virtual Candidate? Candidate { get; set; }
-
-    public virtual PartyList? PartyList { get; set; }
-
-    public virtual User? User { get; set; }
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

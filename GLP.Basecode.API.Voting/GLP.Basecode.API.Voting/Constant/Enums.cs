@@ -18,6 +18,7 @@
     {
         Success,
         DuplicateIdNumber,
+        DuplicateEmail,
         Error
     }
 

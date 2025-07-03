@@ -14,9 +14,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace GLP.Basecode.API.Voting.Controllers
 {
-    [Authorize]
-    [Route("api/[controller]")]
+    [Authorize(Roles = "SBO Admin,Student")]
     [ApiController]
+    [Route("api/account")]
     public class AccountController : ControllerBase
     {
         private readonly AccountManager _accManager;
@@ -28,8 +28,9 @@ namespace GLP.Basecode.API.Voting.Controllers
             _jwtSettings = jwtSettings.Value;
         }
 
+        //tested
         [AllowAnonymous]
-        [HttpPost("/login")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginViewInputModel model)
         {
             var retVal = await _accManager.CheckUserCredentials(model);
@@ -54,7 +55,7 @@ namespace GLP.Basecode.API.Voting.Controllers
             {
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                new Claim(ClaimTypes.Role, user.RoleName == "User" ? "Student" : user.RoleName) 
+                new Claim(ClaimTypes.Role, user.RoleName) 
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
@@ -68,7 +69,7 @@ namespace GLP.Basecode.API.Voting.Controllers
                 signingCredentials: creds
             );
 
-            var a = TimeZoneConverter.ConvertTimeZone(DateTime.UtcNow);
+            //var a = TimeZoneConverter.ConvertTimeZone(DateTime.UtcNow);
 
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
@@ -80,17 +81,18 @@ namespace GLP.Basecode.API.Voting.Controllers
             });
         }
 
-        [Authorize(Roles = "Student")]
-        [HttpGet("/getAllRoles")]
+        //tested
+        [Authorize(Roles = "Admin")]
+        [HttpGet("getAllRoles")]
         public async Task<IActionResult> GetAllRoles()
         {
             var retVal = await _accManager.GetAllRoles();
             return Ok(new { data = retVal, message = "Data successfully retrieve." });
         }
 
-
-
-        [HttpPost("/create-account")]
+        //tested
+        [Authorize(Roles = "Admin")]
+        [HttpPost("create-account")]
         public async Task<IActionResult> CreateAccount([FromBody] CreateAccountViewInputModel model)
         {
             var retVal = await _accManager.CreateStudentAccount(model);
@@ -99,26 +101,15 @@ namespace GLP.Basecode.API.Voting.Controllers
             {
                 AccountCreationResult.Success => Ok(new { success = true, message = retVal.Message }),
                 AccountCreationResult.DuplicateIdNumber => Conflict(new { success = false, message = retVal.Message }),
+                AccountCreationResult.DuplicateEmail => Conflict(new { success = false, message = retVal.Message }),
                 AccountCreationResult.Error => StatusCode(500, new { success = false, message = retVal.Message }),
                 _ => StatusCode(500, new { success = false, message = "Unknown error occurred." })
             };
         }
 
-        //[HttpPost("/login")]
-        //public async Task<IActionResult> Login([FromBody] LoginViewInputModel model)
-        //{
-        //    var retVal = await _accManager.CheckUserCredentials(model);
-
-        //    return retVal.Result switch
-        //    {
-        //        LoginResult.Success => Ok(new { success = true, message = retVal.Message }),
-        //        LoginResult.UserNotFound => NotFound(new { success = false, message = retVal.Message }),
-        //        LoginResult.InvalidPassword => Unauthorized(new { success = false, message = retVal.Message }),
-        //        _ => StatusCode(500, new { success = false, message = "Unknown error occurred." })
-        //    };
-        //}
-
-        [HttpPost("/recovery/send-otp")]
+        //tested
+        [AllowAnonymous] 
+        [HttpPost("recovery/send-otp")]
         public async Task<IActionResult> SendOTPForgotPassword([FromBody] ForgotPasswordViewInputModel model)
         {
             var result = await _accManager.SendOTPForgotPassword(model);
