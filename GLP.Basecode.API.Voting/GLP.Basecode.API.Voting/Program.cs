@@ -89,7 +89,7 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 
 // Stateless utility class: safe to use transient
 builder.Services.AddTransient<MailManager>();
-builder.Services.AddTransient<ImageFilePath>();
+builder.Services.AddTransient<PartyListImageFileManager>();
 
 // Manager classes: correctly scoped
 builder.Services.AddScoped<AccountManager>();

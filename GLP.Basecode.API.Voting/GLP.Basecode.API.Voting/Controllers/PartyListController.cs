@@ -27,9 +27,9 @@ namespace GLP.Basecode.API.Voting.Controllers
             {
                 return retVal.Status switch
                 {
-                    ErrorCode.Error => NotFound(new { success = false, message = retVal.ErrorMessage }),
+                    ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
                     ErrorCode.Duplicate => Conflict(new { success = false, message = retVal.ErrorMessage }),
-                    _ => StatusCode(500, new { success = false, message = "Unknown error occurred." })
+                    _ => StatusCode(500, new { success = false, message = retVal.ErrorMessage })
                 };
             }
 
@@ -57,6 +57,26 @@ namespace GLP.Basecode.API.Voting.Controllers
                 data = result,
                 message = "Party List successfully retrieved."
             });
+        }
+
+
+
+        [HttpPut("party-list/{id:long}")]
+        public async Task<IActionResult> UpdatePartyList(long id, [FromForm] UpdatePartyListViewModel model)
+        {
+            var retVal = await _partyListManager.EditPartyList(id, model);
+
+            if (retVal.Status != ErrorCode.Success)
+            {
+                return retVal.Status switch
+                {
+                    ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
+                    ErrorCode.Error => BadRequest(new { success = false, message = retVal.ErrorMessage }),
+                    _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
+                };
+            }
+
+            return Ok(new { success = true, message = retVal.SuccessMessage });
         }
     }
 }
