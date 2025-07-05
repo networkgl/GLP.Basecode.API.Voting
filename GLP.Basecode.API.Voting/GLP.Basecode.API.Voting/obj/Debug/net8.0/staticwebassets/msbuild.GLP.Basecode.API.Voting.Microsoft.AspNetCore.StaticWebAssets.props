@@ -1,20 +1,22 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\Group Image\PINS Party List\c27fef07-9734-4386-b69c-94da031b193c.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\BABO Party List\Group Image\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png'))">
       <SourceType>Package</SourceType>
       <SourceId>GLP.Basecode.API.Voting</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
-      <RelativePath>File/Images/2024-2025/Party List/Group Image/PINS Party List/c27fef07-9734-4386-b69c-94da031b193c.png</RelativePath>
+      <RelativePath>File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>g8sna0jf08</Fingerprint>
+      <Integrity>sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\Group Image\PINS Party List\c27fef07-9734-4386-b69c-94da031b193c.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\BABO Party List\Group Image\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

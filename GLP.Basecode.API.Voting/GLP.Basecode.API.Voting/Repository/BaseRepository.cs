@@ -14,11 +14,11 @@ namespace GLP.Basecode.API.Voting.Repository
         private DbSet<T> _table;
         private readonly ExceptionHandlerMessage _errMsg;
 
-        public BaseRepository(VotingAppDbContext dbContext)
+        public BaseRepository(VotingAppDbContext dbContext, ExceptionHandlerMessage errMsg)
         {
             _db = dbContext; // use DI-provided instance
             _table = _db.Set<T>();
-            _errMsg = new ExceptionHandlerMessage();
+            _errMsg = errMsg;
         }
 
         public async Task<List<T>> GetAllAsync()

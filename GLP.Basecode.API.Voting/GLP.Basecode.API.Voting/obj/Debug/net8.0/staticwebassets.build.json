@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qy3LloxjtRPiGAqAElw/nnr5n+W1skfLH19IQ+waqEU=",
+  "Hash": "0gLrJyf1AUwEurohR92ol7YYXRnO40IUR6COTZL6xIw=",
   "Source": "GLP.Basecode.API.Voting",
   "BasePath": "_content/GLP.Basecode.API.Voting",
   "Mode": "Default",
@@ -10,30 +10,116 @@
     {
       "Name": "GLP.Basecode.API.Voting\\wwwroot",
       "Source": "GLP.Basecode.API.Voting",
-      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\Group Image\\PINS Party List\\c27fef07-9734-4386-b69c-94da031b193c.png",
+      "Identity": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
       "SourceId": "GLP.Basecode.API.Voting",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
-      "RelativePath": "File/Images/2024-2025/Party List/Group Image/PINS Party List/c27fef07-9734-4386-b69c-94da031b193c.png",
+      "RelativePath": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "g8sna0jf08",
+      "Integrity": "sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\Group Image\\PINS Party List\\c27fef07-9734-4386-b69c-94da031b193c.png"
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.g8sna0jf08.png",
+      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "213740"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 11:15:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g8sna0jf08"
+        },
+        {
+          "Name": "label",
+          "Value": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo="
+        }
+      ]
+    },
+    {
+      "Route": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
+      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "213740"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 11:15:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo="
+        }
+      ]
     }
   ]
 }

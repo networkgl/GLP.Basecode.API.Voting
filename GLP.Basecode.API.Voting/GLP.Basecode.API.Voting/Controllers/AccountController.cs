@@ -82,7 +82,7 @@ namespace GLP.Basecode.API.Voting.Controllers
         }
 
         //tested
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "SBO Admin")]
         [HttpGet("getAllRoles")]
         public async Task<IActionResult> GetAllRoles()
         {
@@ -91,7 +91,7 @@ namespace GLP.Basecode.API.Voting.Controllers
         }
 
         //tested
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "SBO Admin")]
         [HttpPost("create-account")]
         public async Task<IActionResult> CreateAccount([FromBody] CreateAccountViewInputModel model)
         {

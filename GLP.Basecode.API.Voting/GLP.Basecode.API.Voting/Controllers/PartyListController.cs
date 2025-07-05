@@ -71,8 +71,8 @@ namespace GLP.Basecode.API.Voting.Controllers
                 return retVal.Status switch
                 {
                     ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
-                    ErrorCode.Error => BadRequest(new { success = false, message = retVal.ErrorMessage }),
-                    _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
+                    //ErrorCode.Error => BadRequest(new { success = false, message = retVal.ErrorMessage }),
+                    _ => StatusCode(500, new { success = false, message = retVal.ErrorMessage })
                 };
             }
 

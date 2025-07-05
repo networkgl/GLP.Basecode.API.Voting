@@ -1,9 +1,9 @@
 using GLP.Basecode.API.Voting.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using GLP.Basecode.API.Voting.Repository;
 using GLP.Basecode.API.Voting.Manager;
 using GLP.Basecode.API.Voting;
+using GLP.Basecode.API.Voting.Handler;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -91,6 +91,7 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 builder.Services.AddTransient<MailManager>();
 builder.Services.AddTransient<PartyListImageFileManager>();
 builder.Services.AddTransient<CandidateImageFileManager>();
+builder.Services.AddTransient<ExceptionHandlerMessage>();
 
 
 // Manager classes: correctly scoped
