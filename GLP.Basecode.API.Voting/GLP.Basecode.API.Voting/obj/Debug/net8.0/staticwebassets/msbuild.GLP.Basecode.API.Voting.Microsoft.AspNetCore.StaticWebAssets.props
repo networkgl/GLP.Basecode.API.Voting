@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\Group Image\TAE\a2d6f8f2-d029-4015-b1ce-0cd9b8589d70.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\Group Image\PINS Party List\c27fef07-9734-4386-b69c-94da031b193c.png))">
       <SourceType>Package</SourceType>
       <SourceId>GLP.Basecode.API.Voting</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
-      <RelativePath>File/Images/2024-2025/Party List/Group Image/TAE/a2d6f8f2-d029-4015-b1ce-0cd9b8589d70.png</RelativePath>
+      <RelativePath>File/Images/2024-2025/Party List/Group Image/PINS Party List/c27fef07-9734-4386-b69c-94da031b193c.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,7 +14,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\Group Image\TAE\a2d6f8f2-d029-4015-b1ce-0cd9b8589d70.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\Group Image\PINS Party List\c27fef07-9734-4386-b69c-94da031b193c.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

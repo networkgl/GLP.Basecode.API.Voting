@@ -90,10 +90,14 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 // Stateless utility class: safe to use transient
 builder.Services.AddTransient<MailManager>();
 builder.Services.AddTransient<PartyListImageFileManager>();
+builder.Services.AddTransient<CandidateImageFileManager>();
+
 
 // Manager classes: correctly scoped
 builder.Services.AddScoped<AccountManager>();
 builder.Services.AddScoped<PartyListManager>();
+builder.Services.AddScoped<CandidateManager>();
+
 
 // Generic repository: correctly scoped
 builder.Services.AddScoped(typeof(BaseRepository<>));
