@@ -89,8 +89,7 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 
 // Stateless utility class: safe to use transient
 builder.Services.AddTransient<MailManager>();
-builder.Services.AddTransient<PartyListImageFileManager>();
-builder.Services.AddTransient<CandidateImageFileManager>();
+builder.Services.AddTransient<ImageFileManager>();
 builder.Services.AddTransient<ExceptionHandlerMessage>();
 
 

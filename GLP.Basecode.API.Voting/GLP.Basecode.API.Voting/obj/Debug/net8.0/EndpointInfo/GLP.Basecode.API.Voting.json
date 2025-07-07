@@ -36,7 +36,7 @@
         }
       }
     },
-    "/api/account/getAllRoles": {
+    "/api/account/get-all-roles": {
       "get": {
         "tags": [
           "Account"
@@ -48,7 +48,7 @@
         }
       }
     },
-    "/api/account/create-account": {
+    "/api/account/create": {
       "post": {
         "tags": [
           "Account"
@@ -110,7 +110,7 @@
         }
       }
     },
-    "/api/candidate/{id}/{posName}": {
+    "/api/candidate/{id}": {
       "get": {
         "tags": [
           "Candidate"
@@ -124,13 +124,87 @@
               "type": "integer",
               "format": "int64"
             }
-          },
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/candidate/create": {
+      "post": {
+        "tags": [
+          "Candidate"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "CandidateImage",
+                  "PartyListId",
+                  "PositionId",
+                  "StudentId"
+                ],
+                "type": "object",
+                "properties": {
+                  "CandidateImage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "StudentId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "PartyListId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "PositionId": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              },
+              "encoding": {
+                "CandidateImage": {
+                  "style": "form"
+                },
+                "StudentId": {
+                  "style": "form"
+                },
+                "PartyListId": {
+                  "style": "form"
+                },
+                "PositionId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/partylist/{id}": {
+      "get": {
+        "tags": [
+          "PartyList"
+        ],
+        "parameters": [
           {
-            "name": "posName",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -141,7 +215,7 @@
         }
       }
     },
-    "/api/partylist/create/party-list": {
+    "/api/partylist/create": {
       "post": {
         "tags": [
           "PartyList"
@@ -183,30 +257,7 @@
         }
       }
     },
-    "/api/partylist/{id}": {
-      "post": {
-        "tags": [
-          "PartyList"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/partylist/party-list/{id}": {
+    "/api/partylist/update/{id}": {
       "put": {
         "tags": [
           "PartyList"

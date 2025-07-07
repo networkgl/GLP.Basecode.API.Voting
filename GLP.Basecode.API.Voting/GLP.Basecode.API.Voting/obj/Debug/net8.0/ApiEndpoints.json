@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "GLP.Basecode.API.Voting.Controllers.AccountController",
-    "Method": "CreateAccount",
-    "RelativePath": "api/account/create-account",
+    "Method": "CreateStudentAccount",
+    "RelativePath": "api/account/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "GLP.Basecode.API.Voting.Controllers.AccountController",
     "Method": "GetAllRoles",
-    "RelativePath": "api/account/getAllRoles",
+    "RelativePath": "api/account/get-all-roles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -60,7 +60,7 @@
   {
     "ContainingType": "GLP.Basecode.API.Voting.Controllers.CandidateController",
     "Method": "GetCandidateBy",
-    "RelativePath": "api/candidate/{id}/{posName}",
+    "RelativePath": "api/candidate/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -69,11 +69,37 @@
         "Name": "id",
         "Type": "System.Int64",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GLP.Basecode.API.Voting.Controllers.CandidateController",
+    "Method": "CreateCandidate",
+    "RelativePath": "api/candidate/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CandidateImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       },
       {
-        "Name": "posName",
-        "Type": "System.String",
-        "IsRequired": true
+        "Name": "StudentId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyListId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "PositionId",
+        "Type": "System.Int64",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -82,7 +108,7 @@
     "ContainingType": "GLP.Basecode.API.Voting.Controllers.PartyListController",
     "Method": "GetPartyListById",
     "RelativePath": "api/partylist/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -96,8 +122,8 @@
   },
   {
     "ContainingType": "GLP.Basecode.API.Voting.Controllers.PartyListController",
-    "Method": "AddPartyList",
-    "RelativePath": "api/partylist/create/party-list",
+    "Method": "CreatePartyList",
+    "RelativePath": "api/partylist/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -118,7 +144,7 @@
   {
     "ContainingType": "GLP.Basecode.API.Voting.Controllers.PartyListController",
     "Method": "UpdatePartyList",
-    "RelativePath": "api/partylist/party-list/{id}",
+    "RelativePath": "api/partylist/update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

@@ -16,13 +16,13 @@ namespace GLP.Basecode.API.Voting.Manager
         private readonly VotingAppDbContext _dbContext;
         private readonly BaseRepository<PartyList> _partyListRepo;
         private readonly BaseRepository<FilePath> _filePathRepo;
-        private readonly PartyListImageFileManager _imageFilePath;
+        private readonly ImageFileManager _imageFilePath;
 
         public PartyListManager(
             VotingAppDbContext dbContext,
             BaseRepository<PartyList> partyListRepo,
             BaseRepository<FilePath> filePathRepo,
-            PartyListImageFileManager imageFilePath
+            ImageFileManager imageFilePath
             )
         {
             _dbContext = dbContext;
@@ -34,7 +34,21 @@ namespace GLP.Basecode.API.Voting.Manager
         //tested
         public async Task<OperationResult<PartyList?>> GetPartyListById(long id)
         {
-            return await _partyListRepo.GetAsyncById(id);
+            var opRes = new OperationResult<PartyList?>();
+
+            var partyList = await _partyListRepo.GetAsyncById(id);
+            if (partyList.Data is null)
+            {
+                opRes.ErrorMessage = partyList.ErrorMessage;
+                opRes.Data = null;
+                opRes.Status = partyList.Status;
+                return opRes;
+            }
+
+            opRes.SuccessMessage = "Data successfully retrieved";
+            opRes.Data = partyList.Data;
+            opRes.Status = ErrorCode.Success;
+            return opRes;
         }
 
         //tested
@@ -48,19 +62,25 @@ namespace GLP.Basecode.API.Voting.Manager
                 opRes.Status = ErrorCode.Duplicate;
                 opRes.ErrorMessage = OperationResultMessageResponse.DUPLICATE; //PARTYLIST EXIST
                 return opRes;
-            }
+            }   
 
             //Handle file paths
             var imageBytes = _imageFilePath.SaveAsPNG(model.PartyListImage);
             var schoolYear = (DateTime.UtcNow.Year - 1).ToString() + "-" + DateTime.UtcNow.Year.ToString();
             string rootFolder = "Party List";
-            var imgPath = _imageFilePath.SaveImageInFolderAsCreatePartyList(imageBytes, schoolYear, rootFolder, model.PartyListName.Trim());
+
+            var (isSaved, imgPath, errMsg) = _imageFilePath.SaveImageToPartyListFolder(imageBytes, schoolYear, rootFolder, string.Join(" ", model.PartyListName.Trim(), rootFolder));
+            if (!isSaved)
+            {
+                opRes.ErrorMessage = errMsg;
+                opRes.Status = ErrorCode.Error;
+                return opRes;
+            }
 
             using var transaction = await _dbContext.Database.BeginTransactionAsync();
 
             try
             {
-
                 var newFilePath = new FilePath()
                 {
                     Path = imgPath
@@ -110,31 +130,32 @@ namespace GLP.Basecode.API.Voting.Manager
         }
 
 
+        //tested
         public async Task<OperationResult<ErrorCode>> EditPartyList(long id, UpdatePartyListViewModel model)
         {
-            var result = new OperationResult<ErrorCode>();
+            var opRes = new OperationResult<ErrorCode>();
 
             if (model.PartyListName == null && model.PartyListImage == null)
             {
-                result.ErrorMessage = "Party List name and campaign image cannot be null.";
-                result.Status = ErrorCode.Error;
-                return result;
+                opRes.ErrorMessage = "Party List name and campaign image cannot be null.";
+                opRes.Status = ErrorCode.Error;
+                return opRes;
             }
 
             var partyList = await _partyListRepo.GetAsyncById(id);
             if (partyList.Data == null)
             {
-                result.ErrorMessage = partyList.ErrorMessage;
-                result.Status = partyList.Status;
-                return result;
+                opRes.ErrorMessage = partyList.ErrorMessage;
+                opRes.Status = partyList.Status;
+                return opRes;
             }
 
             var filePath = await _filePathRepo.GetAsyncById(partyList.Data.FilePathId);
             if (filePath.Data == null)
             {
-                result.ErrorMessage = "File path record not found.";
-                result.Status = ErrorCode.Error;
-                return result;
+                opRes.ErrorMessage = "File path record not found.";
+                opRes.Status = ErrorCode.Error;
+                return opRes;
             }
 
             var schoolYear = $"{DateTime.UtcNow.Year - 1}-{DateTime.UtcNow.Year}";
@@ -153,7 +174,7 @@ namespace GLP.Basecode.API.Voting.Manager
                 {
                     nameChanged = true;
                     var oldName = partyList.Data.PartyListName;
-                    partyList.Data.PartyListName = model.PartyListName.Trim();
+                    partyList.Data.PartyListName = string.Join(" ", model.PartyListName.Trim(), rootFolder);
 
                     var updatePartyList = await _partyListRepo.UpdateAsync(partyList.Data.PartyListId, partyList.Data);
                     if (updatePartyList.Status == ErrorCode.Error)
@@ -163,13 +184,13 @@ namespace GLP.Basecode.API.Voting.Manager
                     }
 
                     // Rename folder
-                    var (folderRenamed, newPath, fileName, errMsg) = _imageFilePath.RenameFolder(schoolYear, rootFolder, oldName, partyList.Data.PartyListName);
+                    var (folderRenamed, newPath, fileName, errMsg) = _imageFilePath.RenameFolderPartyList(schoolYear, rootFolder, oldName, partyList.Data.PartyListName);
                     if (!folderRenamed)
                     {
                         await transaction.RollbackAsync();
-                        result.ErrorMessage = errMsg;
-                        result.Status = ErrorCode.Error;
-                        return result;
+                        opRes.ErrorMessage = errMsg;
+                        opRes.Status = ErrorCode.Error;
+                        return opRes;
                     }
 
                     renamedFolderPath = newPath;
@@ -187,7 +208,7 @@ namespace GLP.Basecode.API.Voting.Manager
                             return new OperationResult<ErrorCode> { ErrorMessage = updateFilePath.ErrorMessage, Status = ErrorCode.Error };
                         }
 
-                        result.SuccessMessage = "Party List name updated successfully.";
+                        opRes.SuccessMessage = "Party List name updated successfully.";
                     }
                 }
 
@@ -201,30 +222,24 @@ namespace GLP.Basecode.API.Voting.Manager
                     if (!_imageFilePath.DeleteImage(oldImagePath))
                     {
                         await transaction.RollbackAsync();
-                        result.ErrorMessage = "Failed to remove the old image from the server.";
-                        result.Status = ErrorCode.Error;
-                        return result;
+                        opRes.ErrorMessage = "Failed to remove the old image from the server.";
+                        opRes.Status = ErrorCode.Error;
+                        return opRes;
                     }
 
                     var imageBytes = _imageFilePath.SaveAsPNG(model.PartyListImage);
                     string? newImagePath;
 
-                    if (nameChanged && renamedFolderPath != null)
+
+                    var (isSaved, relativePath, errMsg) = _imageFilePath.SaveImageToPartyListFolder(imageBytes, schoolYear, rootFolder, partyList.Data.PartyListName);
+                    if (!isSaved)
                     {
-                        var (saved, relativePath, errMsg) = _imageFilePath.SaveImageToFullPath(imageBytes, schoolYear, rootFolder, partyList.Data.PartyListName);
-                        if (!saved)
-                        {
-                            await transaction.RollbackAsync();
-                            result.ErrorMessage = errMsg;
-                            result.Status = ErrorCode.Error;
-                            return result;
-                        }
-                        newImagePath = relativePath;
+                        await transaction.RollbackAsync();
+                        opRes.ErrorMessage = errMsg;
+                        opRes.Status = ErrorCode.Error;
+                        return opRes;
                     }
-                    else
-                    {
-                        newImagePath = _imageFilePath.SaveImageInFolderAsCreatePartyList(imageBytes, schoolYear, rootFolder, partyList.Data.PartyListName);
-                    }
+                    newImagePath = relativePath;
 
                     filePath.Data.Path = newImagePath;
 
@@ -236,14 +251,14 @@ namespace GLP.Basecode.API.Voting.Manager
                         return new OperationResult<ErrorCode> { ErrorMessage = updateImagePath.ErrorMessage, Status = ErrorCode.Error };
                     }
 
-                    result.SuccessMessage = nameChanged
+                    opRes.SuccessMessage = nameChanged
                         ? "Party List name and image successfully updated."
                         : "Party List image successfully updated.";
                 }
 
                 await transaction.CommitAsync();
-                result.Status = ErrorCode.Success;
-                return result;
+                opRes.Status = ErrorCode.Success;
+                return opRes;
             }
             catch (Exception ex)
             {

@@ -8,12 +8,12 @@ using GLP.Basecode.API.Voting.Handler;
 
 namespace GLP.Basecode.API.Voting.Services
 {
-    public class PartyListImageFileManager
+    public class ImageFileManager
     {
         private readonly IWebHostEnvironment _env;
         private readonly ExceptionHandlerMessage _exceptionHandlerMessage;
 
-        public PartyListImageFileManager(IWebHostEnvironment env, ExceptionHandlerMessage exceptionHandlerMessage)
+        public ImageFileManager(IWebHostEnvironment env, ExceptionHandlerMessage exceptionHandlerMessage)
         {
             _env = env ?? throw new ArgumentNullException(nameof(env));
             _exceptionHandlerMessage = exceptionHandlerMessage;
@@ -40,36 +40,79 @@ namespace GLP.Basecode.API.Voting.Services
             return pngStream.ToArray();
         }
 
-        public string SaveImageInFolderAsCreatePartyList(byte[] imageData, string schoolYear, string rootFolder, string folderName)
+
+        //CANDIDATE 
+        public (bool IsSaved, string? RelativePath, string? ErrMsg) SaveImageToCandidateFolder(
+            byte[] imageData,
+            string schoolYear,
+            string rootFolder,
+            string partyListName,
+            string candidateName,
+            string posName)
         {
-            
             try
             {
                 if (_env.WebRootPath == null)
                 {
-                    throw new InvalidOperationException("WebRootPath is null. Ensure the application is properly configured and WebRootPath is set.");
+                    throw new InvalidOperationException("WebRootPath is not set.");
                 }
 
-                string rootPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, folderName, "Group Image");
-                Directory.CreateDirectory(rootPath); // create if not exists
+                string folderPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, partyListName, "Group Image", "Candidates");
+                Directory.CreateDirectory(folderPath);
 
-                string fileName = Guid.NewGuid().ToString() + ".png";
-                string fullPath = Path.Combine(rootPath, fileName);
+                string fileName = string.Join("-",candidateName, posName) + ".png";
+                string fullPath = Path.Combine(folderPath, fileName);
 
                 File.WriteAllBytes(fullPath, imageData);
 
-                // Return relative path to be stored in DB or used in frontend
-                return Path.Combine("File","Images", schoolYear,rootFolder, folderName, "Group Image", fileName).Replace("\\", "/");
+                string relativePath = Path.Combine("File", "Images", schoolYear, rootFolder, partyListName, "Group Image", "Candidates", fileName)
+                                      .Replace("\\", "/");
+
+                return (true, "/" + relativePath, null);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                // Optionally log the error here
-                throw new ApplicationException("An error occurred while saving the image.", ex);
+                return (false, null, _exceptionHandlerMessage.GetInnermostExceptionMessage(e));
             }
         }
 
 
-        public (bool Success, string? NewRelativePath, string? FileName, string? ErrMsg) RenameFolder(
+        //PARTY LIST 
+        // tested
+        public (bool IsSaved, string? RelativePath, string? ErrMsg) SaveImageToPartyListFolder(
+            byte[] imageData,
+            string schoolYear,
+            string rootFolder,
+            string partyListName)
+        {
+            try
+            {
+                if (_env.WebRootPath == null)
+                {
+                    throw new InvalidOperationException("WebRootPath is not set.");
+                }
+
+                string folderPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, partyListName, "Group Image");
+                Directory.CreateDirectory(folderPath);
+
+                string fileName = partyListName + ".png";
+                string fullPath = Path.Combine(folderPath, fileName);
+
+                File.WriteAllBytes(fullPath, imageData);
+
+                string relativePath = Path.Combine("File", "Images", schoolYear, rootFolder, partyListName, "Group Image", fileName)
+                                      .Replace("\\", "/");
+
+                return (true, "/" + relativePath, null);
+            }
+            catch (Exception e)
+            {
+                return (false, null, _exceptionHandlerMessage.GetInnermostExceptionMessage(e));
+            }
+        }
+        
+        // tested
+        public (bool Success, string? NewRelativePath, string? FileName, string? ErrMsg) RenameFolderPartyList(
             string schoolYear,
             string rootFolder,
             string oldFolderName,
@@ -112,39 +155,8 @@ namespace GLP.Basecode.API.Voting.Services
                 return (false, null, null, _exceptionHandlerMessage.GetInnermostExceptionMessage(ex));
             }
         }
-
-        public (bool IsSaved, string? RelativePath, string? ErrMsg) SaveImageToFullPath(
-            byte[] imageData,
-            string schoolYear,
-            string rootFolder,
-            string folderName)
-        {
-            try
-            {
-                if (_env.WebRootPath == null)
-                {
-                    throw new InvalidOperationException("WebRootPath is not set.");
-                }
-
-                string folderPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, folderName, "Group Image");
-                Directory.CreateDirectory(folderPath); // Ensures folder exists
-
-                string fileName = Guid.NewGuid().ToString() + ".png";
-                string fullImagePath = Path.Combine(folderPath, fileName);
-
-                File.WriteAllBytes(fullImagePath, imageData);
-
-                string relativePath = Path.Combine("File", "Images", schoolYear, rootFolder, folderName, "Group Image", fileName)
-                                      .Replace("\\", "/");
-
-                return (true, "/" + relativePath, null);
-            }
-            catch (Exception e)
-            {
-                return (false, null, _exceptionHandlerMessage.GetInnermostExceptionMessage(e));
-            }
-        }
-
+       
+        // tested
         public bool DeleteImage(string relativePath)
         {
             string fullPath = Path.Combine(_env.WebRootPath, relativePath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));

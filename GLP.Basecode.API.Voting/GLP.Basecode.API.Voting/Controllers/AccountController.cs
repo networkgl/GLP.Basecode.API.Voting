@@ -83,7 +83,7 @@ namespace GLP.Basecode.API.Voting.Controllers
 
         //tested
         [Authorize(Roles = "SBO Admin")]
-        [HttpGet("getAllRoles")]
+        [HttpGet("get-all-roles")]
         public async Task<IActionResult> GetAllRoles()
         {
             var retVal = await _accManager.GetAllRoles();
@@ -92,8 +92,8 @@ namespace GLP.Basecode.API.Voting.Controllers
 
         //tested
         [Authorize(Roles = "SBO Admin")]
-        [HttpPost("create-account")]
-        public async Task<IActionResult> CreateAccount([FromBody] CreateAccountViewInputModel model)
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateStudentAccount([FromBody] CreateAccountViewInputModel model)
         {
             var retVal = await _accManager.CreateStudentAccount(model);
 

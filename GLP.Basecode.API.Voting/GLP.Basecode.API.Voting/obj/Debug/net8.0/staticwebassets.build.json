@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0gLrJyf1AUwEurohR92ol7YYXRnO40IUR6COTZL6xIw=",
+  "Hash": "E6N1IoMnGQqcX2Oz8n0nuQceuyrNeLg8Z6XeLdW/KHg=",
   "Source": "GLP.Basecode.API.Voting",
   "BasePath": "_content/GLP.Basecode.API.Voting",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
+      "Identity": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png",
       "SourceId": "GLP.Basecode.API.Voting",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
-      "RelativePath": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed#[.{fingerprint}]?.png",
+      "RelativePath": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,17 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "g8sna0jf08",
-      "Integrity": "sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=",
+      "Fingerprint": "7mce4s3ylx",
+      "Integrity": "oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png"
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png"
     }
   ],
   "Endpoints": [
     {
-      "Route": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.g8sna0jf08.png",
-      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
+      "Route": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.7mce4s3ylx.png",
+      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -50,7 +50,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "213740"
+          "Value": "38309"
         },
         {
           "Name": "Content-Type",
@@ -58,11 +58,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=\""
+          "Value": "\"oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 11:15:05 GMT"
+          "Value": "Mon, 07 Jul 2025 12:50:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -72,21 +72,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g8sna0jf08"
+          "Value": "7mce4s3ylx"
         },
         {
           "Name": "label",
-          "Value": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png"
+          "Value": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo="
+          "Value": "sha256-oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es="
         }
       ]
     },
     {
-      "Route": "File/Images/2024-2025/Party List/BABO Party List/Group Image/9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
-      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\BABO Party List\\Group Image\\9d8319f3-5241-4bd4-8d6b-f85afd7390ed.png",
+      "Route": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.png",
+      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -95,7 +95,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "213740"
+          "Value": "38309"
         },
         {
           "Name": "Content-Type",
@@ -103,11 +103,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo=\""
+          "Value": "\"oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 11:15:05 GMT"
+          "Value": "Mon, 07 Jul 2025 12:50:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -117,7 +117,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sCh1YEXZ0LtwcVL0KVfkoBkWT4K0m3XSAXYSZfmNBXo="
+          "Value": "sha256-oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es="
         }
       ]
     }

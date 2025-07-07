@@ -17,9 +17,23 @@ namespace GLP.Basecode.API.Voting.Controllers
             _partyListManager = partListManager;
         }
 
+
         //tested
-        [HttpPost("create/party-list")]
-        public async Task<IActionResult> AddPartyList([FromForm] CreatePartyListViewInputModel model)
+        [HttpGet("{id:long}")]
+        public async Task<IActionResult> GetPartyListById(long id)
+        {
+            var retVal = await _partyListManager.GetPartyListById(id);
+            return retVal.Status switch
+            {
+                ErrorCode.Success => Ok(new { success = true, data = retVal.Data, message = retVal.SuccessMessage }),
+                ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
+                _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
+            };
+        }
+
+        //tested
+        [HttpPost("create")]
+        public async Task<IActionResult> CreatePartyList([FromForm] CreatePartyListViewInputModel model)
         {
             var retVal = await _partyListManager.CreatePartyList(model);
 
@@ -29,7 +43,7 @@ namespace GLP.Basecode.API.Voting.Controllers
                 {
                     ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
                     ErrorCode.Duplicate => Conflict(new { success = false, message = retVal.ErrorMessage }),
-                    _ => StatusCode(500, new { success = false, message = retVal.ErrorMessage })
+                    _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
                 };
             }
 
@@ -37,31 +51,7 @@ namespace GLP.Basecode.API.Voting.Controllers
         }
 
         //tested
-        [HttpPost("{id:long}")]
-        public async Task<IActionResult> GetPartyListById(long id)
-        {
-            var result = await _partyListManager.GetPartyListById(id);
-
-            if (result == null)
-            {
-                return NotFound(new
-                {
-                    success = false,
-                    message = "Party List not found."
-                });
-            }
-
-            return Ok(new
-            {
-                success = true,
-                data = result,
-                message = "Party List successfully retrieved."
-            });
-        }
-
-
-
-        [HttpPut("party-list/{id:long}")]
+        [HttpPut("update/{id:long}")]
         public async Task<IActionResult> UpdatePartyList(long id, [FromForm] UpdatePartyListViewModel model)
         {
             var retVal = await _partyListManager.EditPartyList(id, model);
@@ -72,7 +62,7 @@ namespace GLP.Basecode.API.Voting.Controllers
                 {
                     ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
                     //ErrorCode.Error => BadRequest(new { success = false, message = retVal.ErrorMessage }),
-                    _ => StatusCode(500, new { success = false, message = retVal.ErrorMessage })
+                    _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
                 };
             }
 

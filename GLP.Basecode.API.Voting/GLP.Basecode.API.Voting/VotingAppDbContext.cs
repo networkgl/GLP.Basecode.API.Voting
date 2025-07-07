@@ -18,6 +18,8 @@ public partial class VotingAppDbContext : DbContext
 
     public virtual DbSet<Candidate> Candidates { get; set; }
 
+    public virtual DbSet<CandidatePosition> CandidatePositions { get; set; }
+
     public virtual DbSet<Course> Courses { get; set; }
 
     public virtual DbSet<ElectedCandidate> ElectedCandidates { get; set; }
@@ -51,15 +53,43 @@ public partial class VotingAppDbContext : DbContext
             entity.Property(e => e.CandidateId).HasColumnName("candidateId");
             entity.Property(e => e.FilePathId).HasColumnName("filePathId");
             entity.Property(e => e.PartyListId).HasColumnName("partyListId");
+            entity.Property(e => e.StudentId).HasColumnName("studentId");
 
             entity.HasOne(d => d.FilePath).WithMany(p => p.Candidates)
                 .HasForeignKey(d => d.FilePathId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Candidates_FilePaths");
 
             entity.HasOne(d => d.PartyList).WithMany(p => p.Candidates)
                 .HasForeignKey(d => d.PartyListId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Candidates_PartyLists");
+
+            entity.HasOne(d => d.Student).WithMany(p => p.Candidates)
+                .HasForeignKey(d => d.StudentId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Candidates_Students");
+        });
+
+        modelBuilder.Entity<CandidatePosition>(entity =>
+        {
+            entity.HasKey(e => e.CanposId);
+
+            entity.ToTable("CandidatePosition");
+
+            entity.Property(e => e.CanposId).HasColumnName("canposId");
+            entity.Property(e => e.CandidateId).HasColumnName("candidateId");
+            entity.Property(e => e.PositionId).HasColumnName("positionId");
+
+            entity.HasOne(d => d.Candidate).WithMany(p => p.CandidatePositions)
+                .HasForeignKey(d => d.CandidateId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_CandidatePosition_Candidates");
+
+            entity.HasOne(d => d.Position).WithMany(p => p.CandidatePositions)
+                .HasForeignKey(d => d.PositionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_CandidatePosition_Positions");
         });
 
         modelBuilder.Entity<Course>(entity =>
@@ -184,7 +214,6 @@ public partial class VotingAppDbContext : DbContext
         modelBuilder.Entity<Student>(entity =>
         {
             entity.Property(e => e.StudentId).HasColumnName("studentId");
-            entity.Property(e => e.CandidateId).HasColumnName("candidateId");
             entity.Property(e => e.CourseId).HasColumnName("courseId");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
@@ -197,10 +226,6 @@ public partial class VotingAppDbContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("middleName");
             entity.Property(e => e.SyId).HasColumnName("syId");
-
-            entity.HasOne(d => d.Candidate).WithMany(p => p.Students)
-                .HasForeignKey(d => d.CandidateId)
-                .HasConstraintName("FK_Students_Candidates");
 
             entity.HasOne(d => d.Course).WithMany(p => p.Students)
                 .HasForeignKey(d => d.CourseId)

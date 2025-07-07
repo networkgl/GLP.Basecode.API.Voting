@@ -15,13 +15,11 @@ public partial class Student
 
     public string? MiddleName { get; set; }
 
-    public long? CandidateId { get; set; }
-
     public long SyId { get; set; }
 
     public long CourseId { get; set; }
 
-    public virtual Candidate? Candidate { get; set; }
+    public virtual ICollection<Candidate> Candidates { get; set; } = new List<Candidate>();
 
     public virtual Course Course { get; set; } = null!;
 

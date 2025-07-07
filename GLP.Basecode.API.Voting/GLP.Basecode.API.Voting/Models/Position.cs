@@ -17,5 +17,7 @@ public partial class Position
 
     public virtual Candidate Candidate { get; set; } = null!;
 
+    public virtual ICollection<CandidatePosition> CandidatePositions { get; set; } = new List<CandidatePosition>();
+
     public virtual SchoolYear Sy { get; set; } = null!;
 }
