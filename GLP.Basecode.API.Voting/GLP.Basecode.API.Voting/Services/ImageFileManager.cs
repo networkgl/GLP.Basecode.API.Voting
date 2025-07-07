@@ -57,7 +57,7 @@ namespace GLP.Basecode.API.Voting.Services
                     throw new InvalidOperationException("WebRootPath is not set.");
                 }
 
-                string folderPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, partyListName, "Group Image", "Candidates");
+                string folderPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, partyListName, "Candidates");
                 Directory.CreateDirectory(folderPath);
 
                 string fileName = string.Join("-",candidateName, posName) + ".png";
@@ -65,7 +65,7 @@ namespace GLP.Basecode.API.Voting.Services
 
                 File.WriteAllBytes(fullPath, imageData);
 
-                string relativePath = Path.Combine("File", "Images", schoolYear, rootFolder, partyListName, "Group Image", "Candidates", fileName)
+                string relativePath = Path.Combine("File", "Images", schoolYear, rootFolder, partyListName, "Candidates", fileName)
                                       .Replace("\\", "/");
 
                 return (true, "/" + relativePath, null);

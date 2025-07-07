@@ -42,9 +42,11 @@ public partial class VotingAppDbContext : DbContext
 
     public virtual DbSet<UserVote> UserVotes { get; set; }
 
+    public virtual DbSet<VwGetAllCandidatesByCurrentSchoolYear> VwGetAllCandidatesByCurrentSchoolYears { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-UDTRL17\\SQLEXPRESS;Initial Catalog=VotingAppDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-67QU08T\\SQLEXPRESS;Initial Catalog=VotingAppDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -73,9 +75,7 @@ public partial class VotingAppDbContext : DbContext
 
         modelBuilder.Entity<CandidatePosition>(entity =>
         {
-            entity.HasKey(e => e.CanposId);
-
-            entity.ToTable("CandidatePosition");
+            entity.HasKey(e => e.CanposId).HasName("PK_CandidatePosition");
 
             entity.Property(e => e.CanposId).HasColumnName("canposId");
             entity.Property(e => e.CandidateId).HasColumnName("candidateId");
@@ -84,12 +84,12 @@ public partial class VotingAppDbContext : DbContext
             entity.HasOne(d => d.Candidate).WithMany(p => p.CandidatePositions)
                 .HasForeignKey(d => d.CandidateId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_CandidatePosition_Candidates");
+                .HasConstraintName("FK_CandidatePositions_Candidates");
 
             entity.HasOne(d => d.Position).WithMany(p => p.CandidatePositions)
                 .HasForeignKey(d => d.PositionId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_CandidatePosition_Positions");
+                .HasConstraintName("FK_CandidatePositions_Positions");
         });
 
         modelBuilder.Entity<Course>(entity =>
@@ -175,17 +175,11 @@ public partial class VotingAppDbContext : DbContext
         modelBuilder.Entity<Position>(entity =>
         {
             entity.Property(e => e.PositionId).HasColumnName("positionId");
-            entity.Property(e => e.CandidateId).HasColumnName("candidateId");
             entity.Property(e => e.PositionName)
                 .HasMaxLength(100)
                 .HasColumnName("positionName");
             entity.Property(e => e.SequenceNumber).HasColumnName("sequenceNumber");
             entity.Property(e => e.SyId).HasColumnName("syId");
-
-            entity.HasOne(d => d.Candidate).WithMany(p => p.Positions)
-                .HasForeignKey(d => d.CandidateId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Positions_Candidates");
 
             entity.HasOne(d => d.Sy).WithMany(p => p.Positions)
                 .HasForeignKey(d => d.SyId)
@@ -289,6 +283,21 @@ public partial class VotingAppDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.UserVotes)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_UserVotes_Users");
+        });
+
+        modelBuilder.Entity<VwGetAllCandidatesByCurrentSchoolYear>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("vw_get_all_candidates_by_current_school_year");
+
+            entity.Property(e => e.CandidateId).HasColumnName("candidateId");
+            entity.Property(e => e.CandidateName)
+                .HasMaxLength(101)
+                .HasColumnName("Candidate Name");
+            entity.Property(e => e.Position).HasMaxLength(100);
+            entity.Property(e => e.SyFrom).HasColumnName("SY - From");
+            entity.Property(e => e.SyTo).HasColumnName("SY - To");
         });
 
         OnModelCreatingPartial(modelBuilder);

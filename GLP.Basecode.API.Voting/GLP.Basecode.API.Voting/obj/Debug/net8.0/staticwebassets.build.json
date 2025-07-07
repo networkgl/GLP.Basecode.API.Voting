@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E6N1IoMnGQqcX2Oz8n0nuQceuyrNeLg8Z6XeLdW/KHg=",
+  "Hash": "LC1NlEriXylkL1vMB91s3j7XT0wQb97A0bKyb2V+WRU=",
   "Source": "GLP.Basecode.API.Voting",
   "BasePath": "_content/GLP.Basecode.API.Voting",
   "Mode": "Default",
@@ -10,116 +10,144 @@
     {
       "Name": "GLP.Basecode.API.Voting\\wwwroot",
       "Source": "GLP.Basecode.API.Voting",
-      "ContentRoot": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png",
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\A.I Party List\\Group Image\\A.I Party List.png",
       "SourceId": "GLP.Basecode.API.Voting",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
-      "RelativePath": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List#[.{fingerprint}]?.png",
+      "RelativePath": "File/Images/2024-2025/Party List/A.I Party List/Group Image/A.I Party List.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7mce4s3ylx",
-      "Integrity": "oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.7mce4s3ylx.png",
-      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "38309"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 12:50:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7mce4s3ylx"
-        },
-        {
-          "Name": "label",
-          "Value": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es="
-        }
-      ]
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\A.I Party List\\Group Image\\A.I Party List.png"
     },
     {
-      "Route": "File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.png",
-      "AssetFile": "C:\\Users\\Gian Lloyd\\Documents\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\HAHA Party List\\Group Image\\HAHA Party List.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "38309"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Jul 2025 12:50:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es="
-        }
-      ]
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Candidates\\Daniel Mapano-President.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/E.I Party List/Candidates/Daniel Mapano-President.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Candidates\\Daniel Mapano-President.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Group Image\\E.I Party List.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/E.I Party List/Group Image/E.I Party List.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Group Image\\E.I Party List.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Argee Paquibot-VP-External.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/PINS Party List/Candidates/Argee Paquibot-VP-External.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Argee Paquibot-VP-External.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Gian Lloyd Pinote-President.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/PINS Party List/Candidates/Gian Lloyd Pinote-President.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Gian Lloyd Pinote-President.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\string string-VP-Internal.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/PINS Party List/Candidates/string string-VP-Internal.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\string string-VP-Internal.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Group Image\\PINS Party List.png",
+      "SourceId": "GLP.Basecode.API.Voting",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
+      "BasePath": "_content/GLP.Basecode.API.Voting",
+      "RelativePath": "File/Images/2024-2025/Party List/PINS Party List/Group Image/PINS Party List.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Group Image\\PINS Party List.png"
     }
   ]
 }

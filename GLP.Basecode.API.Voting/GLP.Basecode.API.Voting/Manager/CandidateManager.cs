@@ -4,6 +4,7 @@ using GLP.Basecode.API.Voting.Models;
 using GLP.Basecode.API.Voting.Models.ApiModel;
 using GLP.Basecode.API.Voting.Repository;
 using GLP.Basecode.API.Voting.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace GLP.Basecode.API.Voting.Manager
 {
@@ -42,21 +43,23 @@ namespace GLP.Basecode.API.Voting.Manager
             _errMsg = errMsg;
         }
 
-        public async Task<OperationResult<Candidate?>> GetCandidateBy(long candidateId)
+        //tested
+        public async Task<OperationResult<VwGetAllCandidatesByCurrentSchoolYear?>> GetCandidateBy(long candidateId)
         {
-            var opRes = new OperationResult<Candidate?>();
+            var opRes = new OperationResult<VwGetAllCandidatesByCurrentSchoolYear?>();
 
-            var candidate = await _candidateRepo.GetAsyncById(candidateId);
-            if (candidate.Data is null)
+            var candidates = await _dbContext.VwGetAllCandidatesByCurrentSchoolYears.ToListAsync();
+            var getCandidateById = candidates.Where(c => c.CandidateId == candidateId).FirstOrDefault();
+            if (getCandidateById is null)
             {
-                opRes.ErrorMessage = candidate.ErrorMessage;
+                opRes.ErrorMessage = $"Candidate not found ID: {candidateId}";
                 opRes.Data = null;
-                opRes.Status = candidate.Status;
+                opRes.Status = ErrorCode.NotFound;
                 return opRes;
             }
 
-            opRes.SuccessMessage = "Data successfully retrieved";
-            opRes.Data = candidate.Data;
+            opRes.SuccessMessage = "Data successfully retrieved.";
+            opRes.Data = getCandidateById;
             opRes.Status = ErrorCode.Success;
             return opRes;
         }

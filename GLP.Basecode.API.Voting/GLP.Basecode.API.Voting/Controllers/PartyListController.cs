@@ -17,7 +17,6 @@ namespace GLP.Basecode.API.Voting.Controllers
             _partyListManager = partListManager;
         }
 
-
         //tested
         [HttpGet("{id:long}")]
         public async Task<IActionResult> GetPartyListById(long id)
@@ -29,6 +28,13 @@ namespace GLP.Basecode.API.Voting.Controllers
                 ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
                 _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
             };
+        }
+
+        [HttpGet("get-all-partylist")]
+        public async Task<IActionResult> GetAllPartyList()
+        {
+            var retVal = await _partyListManager.GetAllPartyList();
+            return Ok(new { success = true, data = retVal, message = "Party List successfully retrieved." });
         }
 
         //tested
@@ -62,7 +68,7 @@ namespace GLP.Basecode.API.Voting.Controllers
                 {
                     ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
                     //ErrorCode.Error => BadRequest(new { success = false, message = retVal.ErrorMessage }),
-                    _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
+                    _ => StatusCode(500, new { success = false, message = retVal.ErrorMessage })
                 };
             }
 

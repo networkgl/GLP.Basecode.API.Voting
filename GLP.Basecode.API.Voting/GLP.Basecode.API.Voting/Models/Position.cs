@@ -11,11 +11,7 @@ public partial class Position
 
     public int SequenceNumber { get; set; }
 
-    public long CandidateId { get; set; }
-
     public long SyId { get; set; }
-
-    public virtual Candidate Candidate { get; set; } = null!;
 
     public virtual ICollection<CandidatePosition> CandidatePositions { get; set; } = new List<CandidatePosition>();
 

@@ -19,8 +19,6 @@ public partial class Candidate
 
     public virtual PartyList PartyList { get; set; } = null!;
 
-    public virtual ICollection<Position> Positions { get; set; } = new List<Position>();
-
     public virtual Student Student { get; set; } = null!;
 
     public virtual ICollection<UserVote> UserVotes { get; set; } = new List<UserVote>();

@@ -52,6 +52,12 @@ namespace GLP.Basecode.API.Voting.Manager
         }
 
         //tested
+        public async Task<List<PartyList>> GetAllPartyList()
+        {
+            return await _partyListRepo.GetAllAsync();
+        }
+
+        //tested
         public async Task<OperationResult<ErrorCode>> CreatePartyList(CreatePartyListViewInputModel model)
         {
             var opRes = new OperationResult<ErrorCode>();
@@ -68,8 +74,9 @@ namespace GLP.Basecode.API.Voting.Manager
             var imageBytes = _imageFilePath.SaveAsPNG(model.PartyListImage);
             var schoolYear = (DateTime.UtcNow.Year - 1).ToString() + "-" + DateTime.UtcNow.Year.ToString();
             string rootFolder = "Party List";
+            string partListName = string.Join(" ", model.PartyListName.Trim(), rootFolder);
 
-            var (isSaved, imgPath, errMsg) = _imageFilePath.SaveImageToPartyListFolder(imageBytes, schoolYear, rootFolder, string.Join(" ", model.PartyListName.Trim(), rootFolder));
+            var (isSaved, imgPath, errMsg) = _imageFilePath.SaveImageToPartyListFolder(imageBytes, schoolYear, rootFolder, partListName);
             if (!isSaved)
             {
                 opRes.ErrorMessage = errMsg;
@@ -97,7 +104,7 @@ namespace GLP.Basecode.API.Voting.Manager
 
                 var newPartyList = new PartyList()
                 {
-                    PartyListName = model.PartyListName,
+                    PartyListName = partListName,
                     FilePathId = newFilePath.FilePathId,
                     CreatedAt = TimeZoneConverter.ConvertTimeZone(DateTime.UtcNow)
                 };
@@ -128,7 +135,6 @@ namespace GLP.Basecode.API.Voting.Manager
                 return opRes;
             }
         }
-
 
         //tested
         public async Task<OperationResult<ErrorCode>> EditPartyList(long id, UpdatePartyListViewModel model)

@@ -1,22 +1,116 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\HAHA Party List\Group Image\HAHA Party List.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\A.I Party List\Group Image\A.I Party List.png))">
       <SourceType>Package</SourceType>
       <SourceId>GLP.Basecode.API.Voting</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
-      <RelativePath>File/Images/2024-2025/Party List/HAHA Party List/Group Image/HAHA Party List.png</RelativePath>
+      <RelativePath>File/Images/2024-2025/Party List/A.I Party List/Group Image/A.I Party List.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7mce4s3ylx</Fingerprint>
-      <Integrity>oaTKypl9DUzIYdrdFi3nV2LN8gAnD1nGrJcLqsxC0es=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\HAHA Party List\Group Image\HAHA Party List.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\A.I Party List\Group Image\A.I Party List.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\E.I Party List\Candidates\Daniel Mapano-President.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GLP.Basecode.API.Voting</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
+      <RelativePath>File/Images/2024-2025/Party List/E.I Party List/Candidates/Daniel Mapano-President.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\E.I Party List\Candidates\Daniel Mapano-President.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\E.I Party List\Group Image\E.I Party List.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GLP.Basecode.API.Voting</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
+      <RelativePath>File/Images/2024-2025/Party List/E.I Party List/Group Image/E.I Party List.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\E.I Party List\Group Image\E.I Party List.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Candidates\Argee Paquibot-VP-External.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GLP.Basecode.API.Voting</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
+      <RelativePath>File/Images/2024-2025/Party List/PINS Party List/Candidates/Argee Paquibot-VP-External.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Candidates\Argee Paquibot-VP-External.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Candidates\Gian Lloyd Pinote-President.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GLP.Basecode.API.Voting</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
+      <RelativePath>File/Images/2024-2025/Party List/PINS Party List/Candidates/Gian Lloyd Pinote-President.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Candidates\Gian Lloyd Pinote-President.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Candidates\string string-VP-Internal.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GLP.Basecode.API.Voting</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
+      <RelativePath>File/Images/2024-2025/Party List/PINS Party List/Candidates/string string-VP-Internal.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Candidates\string string-VP-Internal.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Group Image\PINS Party List.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>GLP.Basecode.API.Voting</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GLP.Basecode.API.Voting</BasePath>
+      <RelativePath>File/Images/2024-2025/Party List/PINS Party List/Group Image/PINS Party List.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\File\Images\2024-2025\Party List\PINS Party List\Group Image\PINS Party List.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
