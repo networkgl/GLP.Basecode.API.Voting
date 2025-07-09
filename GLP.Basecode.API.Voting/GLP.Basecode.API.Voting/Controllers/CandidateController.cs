@@ -29,7 +29,7 @@ namespace GLP.Basecode.API.Voting.Controllers
             };
         }
 
-        //not tested
+        //tested
         [HttpPost("create")]
         public async Task<IActionResult> CreateCandidate([FromForm] CreateCandidateViewInputModel model)
         {
@@ -42,5 +42,18 @@ namespace GLP.Basecode.API.Voting.Controllers
             };
         }
 
+        //not tested
+        [HttpPut("update/{canId:long}/{posId:long}")]
+        public async Task<IActionResult> UpdateCandidate(long canId, long posId, [FromForm] UpdateCandidateViewModel model)
+        {
+            var retVal = await _canManager.UpdateCandidate(canId, posId, model);
+
+            return retVal.Status switch
+            {
+                ErrorCode.Success => Ok(new { success = true, message = retVal.SuccessMessage }),
+                ErrorCode.Error => StatusCode(500, new { success = false, message = retVal.ErrorMessage }),
+                _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
+            };
+        }
     }
 }

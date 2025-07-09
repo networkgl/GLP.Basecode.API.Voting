@@ -137,7 +137,7 @@ namespace GLP.Basecode.API.Voting.Manager
         }
 
         //tested
-        public async Task<OperationResult<ErrorCode>> EditPartyList(long id, UpdatePartyListViewModel model)
+        public async Task<OperationResult<ErrorCode>> UpdatePartyList(long id, UpdatePartyListViewModel model)
         {
             var opRes = new OperationResult<ErrorCode>();
 

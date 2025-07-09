@@ -64,7 +64,7 @@ namespace GLP.Basecode.API.Voting.Manager
             return opRes;
         }
 
-        //not yet tested
+        //tested
         public async Task<OperationResult<ErrorCode>> CreateCandidate(CreateCandidateViewInputModel model)
         {
             var opRes = new OperationResult<ErrorCode>();
@@ -166,6 +166,109 @@ namespace GLP.Basecode.API.Voting.Manager
 
         }
 
+        //not tested
+        public async Task<OperationResult<ErrorCode>> UpdateCandidate(long canId, long posId, UpdateCandidateViewModel model)
+        {
+            var opRes = new OperationResult<ErrorCode>();
+
+            if (model.CandidateImage is null && model.PositionId is null)
+            {
+                opRes.SuccessMessage = "Candidate successfully updated.";
+                opRes.Status = ErrorCode.Success;
+                return opRes;
+            }
+
+            var candidateDetails = await _dbContext.VwGetCandidateDetails.Where(c => c.CandidateId == canId || c.PositionId == posId).FirstOrDefaultAsync();
+            if (candidateDetails is null)
+            {
+                opRes.ErrorMessage = $"Error: No candidate and position found with the ID: {canId} , {posId}";
+                opRes.Status = ErrorCode.Error;
+                return opRes;
+            }
+
+            var transaction = await _dbContext.Database.BeginTransactionAsync();
+
+            try
+            {
+                //1. Image Update
+                if (model.CandidateImage is not null)
+                {
+                    var isDeleted = _imageFilePath.DeleteImage(candidateDetails.ImgPath);
+                    if (!isDeleted)
+                    {
+                        opRes.ErrorMessage = $"Error: Cannot delete image from path: {candidateDetails.ImgPath}";
+                        opRes.Status = ErrorCode.Error;
+                        return opRes;
+                    }
+
+
+                    //Handle file paths
+                    var imageBytes = _imageFilePath.SaveAsPNG(model.CandidateImage);
+                    var schoolYear = (DateTime.UtcNow.Year - 1).ToString() + "-" + DateTime.UtcNow.Year.ToString();
+                    string rootFolder = "Party List";
+                    string partyListName = candidateDetails.PartyListName;
+                    var position = candidateDetails.PositionName;
+                    string candidateName = candidateDetails.CandidateName;
+
+                    var (isSaved, imgPath, errMsg) = _imageFilePath.SaveImageToCandidateFolder(imageBytes, schoolYear, rootFolder, partyListName, candidateName, position);
+                    if (!isSaved)
+                    {
+                        opRes.ErrorMessage = errMsg;
+                        opRes.Status = ErrorCode.Error;
+                        return opRes;
+                    }
+
+                    //Assign new path.
+                    var filePath = await _filePathRepo.GetAsyncById(candidateDetails.FilePathId);
+                    filePath.Data.Path = imgPath;
+
+                    var retValNewCanImg = await _filePathRepo.UpdateAsync(filePath.Data.FilePathId, filePath.Data);
+                    if (retValNewCanImg.Status == ErrorCode.Error)
+                    {
+                        await transaction.RollbackAsync();
+                        opRes.ErrorMessage = retValNewCanImg.ErrorMessage;
+                        opRes.Status = retValNewCanImg.Status;
+                        return opRes;
+                    }
+                }
+
+                //2. Position Update
+                if (model.PositionId is not null)
+                {
+                    var canPos = await _canPostRepo.GetAsyncById(candidateDetails.CandidateId);
+                    canPos.Data.PositionId = (long)model.PositionId;
+
+                    var retValCanPos = await _canPostRepo.UpdateAsync(canPos.Data.CanposId, canPos.Data);
+                    if (retValCanPos.Status == ErrorCode.Error)
+                    {
+                        await transaction.RollbackAsync();
+                        opRes.ErrorMessage = retValCanPos.ErrorMessage;
+                        opRes.Status = retValCanPos.Status;
+                        return opRes;
+                    }
+                }
+
+
+                if (model.CandidateImage is not null )
+                    opRes.SuccessMessage = "Candidate image successfully udpated.";
+                else if (model.PositionId is not null)
+                    opRes.SuccessMessage = "Candidate position successfully udpated.";
+                else
+                    opRes.SuccessMessage = "Candidate image and position successfully udpated.";
+
+                opRes.Status = ErrorCode.Success;
+                return opRes;
+            }
+            catch (Exception e)
+            {
+                await transaction.RollbackAsync();
+                opRes.ErrorMessage = _errMsg.GetInnermostExceptionMessage(e);
+                opRes.Status = ErrorCode.Error;
+                return opRes;
+            }
+
+       
+        }
 
     }
 }

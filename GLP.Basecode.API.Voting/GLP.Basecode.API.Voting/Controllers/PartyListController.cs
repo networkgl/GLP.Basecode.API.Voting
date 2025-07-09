@@ -60,7 +60,7 @@ namespace GLP.Basecode.API.Voting.Controllers
         [HttpPut("update/{id:long}")]
         public async Task<IActionResult> UpdatePartyList(long id, [FromForm] UpdatePartyListViewModel model)
         {
-            var retVal = await _partyListManager.EditPartyList(id, model);
+            var retVal = await _partyListManager.UpdatePartyList(id, model);
 
             if (retVal.Status != ErrorCode.Success)
             {
