@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LC1NlEriXylkL1vMB91s3j7XT0wQb97A0bKyb2V+WRU=",
+  "Hash": "xOLBPiIsvLKIXGUDQQMCYkjV87vbSUi5vmyAPM/WSmQ=",
   "Source": "GLP.Basecode.API.Voting",
   "BasePath": "_content/GLP.Basecode.API.Voting",
   "Mode": "Default",
@@ -36,12 +36,12 @@
       "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\A.I Party List\\Group Image\\A.I Party List.png"
     },
     {
-      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Candidates\\Daniel Mapano-President.png",
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Candidates\\Daniel Mapano - President.png",
       "SourceId": "GLP.Basecode.API.Voting",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
-      "RelativePath": "File/Images/2024-2025/Party List/E.I Party List/Candidates/Daniel Mapano-President.png",
+      "RelativePath": "File/Images/2024-2025/Party List/E.I Party List/Candidates/Daniel Mapano - President.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Candidates\\Daniel Mapano-President.png"
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Candidates\\Daniel Mapano - President.png"
     },
     {
       "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\E.I Party List\\Group Image\\E.I Party List.png",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Argee Paquibot-VP-External.png"
     },
     {
-      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Gian Lloyd Pinote-President.png",
+      "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Gian Lloyd Pinote - President.png",
       "SourceId": "GLP.Basecode.API.Voting",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\",
       "BasePath": "_content/GLP.Basecode.API.Voting",
-      "RelativePath": "File/Images/2024-2025/Party List/PINS Party List/Candidates/Gian Lloyd Pinote-President.png",
+      "RelativePath": "File/Images/2024-2025/Party List/PINS Party List/Candidates/Gian Lloyd Pinote - President.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Gian Lloyd Pinote-President.png"
+      "OriginalItemSpec": "wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\Gian Lloyd Pinote - President.png"
     },
     {
       "Identity": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\wwwroot\\File\\Images\\2024-2025\\Party List\\PINS Party List\\Candidates\\string string-VP-Internal.png",

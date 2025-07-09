@@ -44,7 +44,7 @@ public partial class VotingAppDbContext : DbContext
 
     public virtual DbSet<VwGetAllCandidatesByCurrentSchoolYear> VwGetAllCandidatesByCurrentSchoolYears { get; set; }
 
-    public virtual DbSet<VwGetCandidateDetail> VwGetCandidateDetails { get; set; }
+    public virtual DbSet<VwGetCandidateOrPartylistDetail> VwGetCandidateOrPartylistDetails { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -302,11 +302,11 @@ public partial class VotingAppDbContext : DbContext
             entity.Property(e => e.SyTo).HasColumnName("SY - To");
         });
 
-        modelBuilder.Entity<VwGetCandidateDetail>(entity =>
+        modelBuilder.Entity<VwGetCandidateOrPartylistDetail>(entity =>
         {
             entity
                 .HasNoKey()
-                .ToView("vw_get_candidate_details");
+                .ToView("vw_get_candidate_or_partylist_details");
 
             entity.Property(e => e.CandidateName).HasMaxLength(101);
             entity.Property(e => e.PartyListName).HasMaxLength(100);

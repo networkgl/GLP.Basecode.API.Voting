@@ -3,6 +3,6 @@
     public class UpdateCandidateViewModel
     {
         public IFormFile? CandidateImage { get; set; }
-        public long? PositionId { get; set; }
+        public long? NewPositionId { get; set; }
     }
 }

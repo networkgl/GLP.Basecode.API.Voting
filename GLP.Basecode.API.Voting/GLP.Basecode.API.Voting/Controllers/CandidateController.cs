@@ -42,16 +42,17 @@ namespace GLP.Basecode.API.Voting.Controllers
             };
         }
 
-        //not tested
-        [HttpPut("update/{canId:long}/{posId:long}")]
-        public async Task<IActionResult> UpdateCandidate(long canId, long posId, [FromForm] UpdateCandidateViewModel model)
+        //tested
+        [HttpPut("update/{canId:long}/{ptylstId:long}")]
+        public async Task<IActionResult> UpdateCandidate(long canId, long ptylstId, [FromForm] UpdateCandidateViewModel model)
         {
-            var retVal = await _canManager.UpdateCandidate(canId, posId, model);
+            var retVal = await _canManager.UpdateCandidate(canId, ptylstId, model);
 
             return retVal.Status switch
             {
                 ErrorCode.Success => Ok(new { success = true, message = retVal.SuccessMessage }),
                 ErrorCode.Error => StatusCode(500, new { success = false, message = retVal.ErrorMessage }),
+                ErrorCode.BadRequest => BadRequest(new { success = false, message = retVal.ErrorMessage }),
                 _ => StatusCode(500, new { success = false, message = "Unknown error occured." })
             };
         }

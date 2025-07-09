@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace GLP.Basecode.API.Voting.Models;
 
-public partial class VwGetCandidateDetail
+public partial class VwGetCandidateOrPartylistDetail
 {
+    public long PartyListId { get; set; }
+
     public long? CandidateId { get; set; }
 
     public long? PositionId { get; set; }

@@ -60,7 +60,7 @@ namespace GLP.Basecode.API.Voting.Services
                 string folderPath = Path.Combine(_env.WebRootPath, "File", "Images", schoolYear, rootFolder, partyListName, "Candidates");
                 Directory.CreateDirectory(folderPath);
 
-                string fileName = string.Join("-",candidateName, posName) + ".png";
+                string fileName = string.Join(" - ",candidateName, posName) + ".png";
                 string fullPath = Path.Combine(folderPath, fileName);
 
                 File.WriteAllBytes(fullPath, imageData);
@@ -75,6 +75,49 @@ namespace GLP.Basecode.API.Voting.Services
                 return (false, null, _exceptionHandlerMessage.GetInnermostExceptionMessage(e));
             }
         }
+
+
+        public (bool Success, string? NewRelativePath, string? ErrMsg) RenameCanImgFileName(
+            string schoolYear,
+            string rootFolder,
+            string partyListName,
+            string oldRelativePath,
+            string candidateName,
+            string candidatePosition)
+        {
+            try
+            {
+                // Build full absolute path of the old image
+                string oldFullPath = Path.Combine(_env.WebRootPath, oldRelativePath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
+
+                if (!File.Exists(oldFullPath))
+                {
+                    return (false, null, $"File not found: {oldFullPath}");
+                }
+
+                // Get directory and build new file name
+                string directory = Path.GetDirectoryName(oldFullPath)!;
+                string newFileName = $"{candidateName} - {candidatePosition}.png";
+                string newFullPath = Path.Combine(directory, newFileName);
+
+                if (File.Exists(newFullPath))
+                {
+                    return (false, null, "A file with the new name already exists.");
+                }
+
+                File.Move(oldFullPath, newFullPath);
+
+                // Build relative path to return
+                string relativePath = newFullPath.Replace(_env.WebRootPath, "").Replace("\\", "/");
+                return (true, relativePath, "success");
+            }
+            catch (Exception ex)
+            {
+                return (false, null, _exceptionHandlerMessage.GetInnermostExceptionMessage(ex));
+            }
+        }
+
+
 
 
         //PARTY LIST 

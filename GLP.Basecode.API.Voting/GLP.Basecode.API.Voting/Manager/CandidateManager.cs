@@ -166,23 +166,32 @@ namespace GLP.Basecode.API.Voting.Manager
 
         }
 
-        //not tested
-        public async Task<OperationResult<ErrorCode>> UpdateCandidate(long canId, long posId, UpdateCandidateViewModel model)
+        //tested
+        public async Task<OperationResult<ErrorCode>> UpdateCandidate(long canId, long ptylstId, UpdateCandidateViewModel model)
         {
             var opRes = new OperationResult<ErrorCode>();
 
-            if (model.CandidateImage is null && model.PositionId is null)
+            if (model.CandidateImage is null && model.NewPositionId is null)
             {
-                opRes.SuccessMessage = "Candidate successfully updated.";
-                opRes.Status = ErrorCode.Success;
+                opRes.SuccessMessage = "Candidate Image and Position Id cannot be null.";
+                opRes.Status = ErrorCode.Error;
                 return opRes;
             }
 
-            var candidateDetails = await _dbContext.VwGetCandidateDetails.Where(c => c.CandidateId == canId || c.PositionId == posId).FirstOrDefaultAsync();
+            var candidateDetails = await _dbContext.VwGetCandidateOrPartylistDetails.Where(c => c.CandidateId == canId && c.PartyListId == ptylstId).FirstOrDefaultAsync();
             if (candidateDetails is null)
             {
-                opRes.ErrorMessage = $"Error: No candidate and position found with the ID: {canId} , {posId}";
+                opRes.ErrorMessage = $"Error: No candidate found with the ID: {canId}.";
                 opRes.Status = ErrorCode.Error;
+                return opRes;
+            }
+
+            //Needs to check if the position has not been acquried by other candidates.
+            //But check first for nullability since user can update img OR position
+            if (model.NewPositionId is not null && candidateDetails.PositionId == model.NewPositionId)
+            {
+                opRes.ErrorMessage = $"Error: There is already candidate associated with the position you've selected.";
+                opRes.Status = ErrorCode.BadRequest;
                 return opRes;
             }
 
@@ -193,24 +202,24 @@ namespace GLP.Basecode.API.Voting.Manager
                 //1. Image Update
                 if (model.CandidateImage is not null)
                 {
-                    var isDeleted = _imageFilePath.DeleteImage(candidateDetails.ImgPath);
+                    var isDeleted = _imageFilePath.DeleteImage(candidateDetails.CandidateImgPath);
                     if (!isDeleted)
                     {
-                        opRes.ErrorMessage = $"Error: Cannot delete image from path: {candidateDetails.ImgPath}";
+                        opRes.ErrorMessage = $"Error: Cannot delete image from path: {candidateDetails.CandidateImgPath}";
                         opRes.Status = ErrorCode.Error;
                         return opRes;
                     }
-
 
                     //Handle file paths
                     var imageBytes = _imageFilePath.SaveAsPNG(model.CandidateImage);
                     var schoolYear = (DateTime.UtcNow.Year - 1).ToString() + "-" + DateTime.UtcNow.Year.ToString();
                     string rootFolder = "Party List";
                     string partyListName = candidateDetails.PartyListName;
-                    var position = candidateDetails.PositionName;
+                    var availablePos = await _positionRepo.GetAsyncById(model.NewPositionId);
+                    var NewPosition = availablePos.Data is null ? "No position" : availablePos.Data.PositionName;
                     string candidateName = candidateDetails.CandidateName;
 
-                    var (isSaved, imgPath, errMsg) = _imageFilePath.SaveImageToCandidateFolder(imageBytes, schoolYear, rootFolder, partyListName, candidateName, position);
+                    var (isSaved, newCanImgPth, errMsg) = _imageFilePath.SaveImageToCandidateFolder(imageBytes, schoolYear, rootFolder, partyListName, candidateName, NewPosition);
                     if (!isSaved)
                     {
                         opRes.ErrorMessage = errMsg;
@@ -220,7 +229,7 @@ namespace GLP.Basecode.API.Voting.Manager
 
                     //Assign new path.
                     var filePath = await _filePathRepo.GetAsyncById(candidateDetails.FilePathId);
-                    filePath.Data.Path = imgPath;
+                    filePath.Data.Path = newCanImgPth;
 
                     var retValNewCanImg = await _filePathRepo.UpdateAsync(filePath.Data.FilePathId, filePath.Data);
                     if (retValNewCanImg.Status == ErrorCode.Error)
@@ -233,10 +242,43 @@ namespace GLP.Basecode.API.Voting.Manager
                 }
 
                 //2. Position Update
-                if (model.PositionId is not null)
+                if (model.NewPositionId is not null)
                 {
+                    //Handle file paths
+                    var schoolYear = (DateTime.UtcNow.Year - 1).ToString() + "-" + DateTime.UtcNow.Year.ToString();
+                    string rootFolder = "Party List";
+                    string partyListName = candidateDetails.PartyListName;
+                    var availablePos = await _positionRepo.GetAsyncById(model.NewPositionId);
+                    var NewPosition = availablePos.Data is null ? "No position" : availablePos.Data.PositionName;
+                    string candidateName = candidateDetails.CandidateName;
+
+                    //Rename img file if user did not update img else do nothing...
+                    if (model.CandidateImage is null) 
+                    {
+                        var (isSaved, newCanImgPath, errMsg) = _imageFilePath.RenameCanImgFileName(schoolYear, rootFolder, partyListName, candidateDetails.CandidateImgPath, candidateName, NewPosition);
+                        if (!isSaved)
+                        {
+                            opRes.ErrorMessage = errMsg;
+                            opRes.Status = ErrorCode.Error;
+                            return opRes;
+                        }
+
+                        //Assign new path.
+                        var filePath = await _filePathRepo.GetAsyncById(candidateDetails.FilePathId);
+                        filePath.Data.Path = newCanImgPath;
+
+                        var retValNewCanImg = await _filePathRepo.UpdateAsync(filePath.Data.FilePathId, filePath.Data);
+                        if (retValNewCanImg.Status == ErrorCode.Error)
+                        {
+                            await transaction.RollbackAsync();
+                            opRes.ErrorMessage = retValNewCanImg.ErrorMessage;
+                            opRes.Status = retValNewCanImg.Status;
+                            return opRes;
+                        }
+                    }
+
                     var canPos = await _canPostRepo.GetAsyncById(candidateDetails.CandidateId);
-                    canPos.Data.PositionId = (long)model.PositionId;
+                    canPos.Data.PositionId = (long)model.NewPositionId;
 
                     var retValCanPos = await _canPostRepo.UpdateAsync(canPos.Data.CanposId, canPos.Data);
                     if (retValCanPos.Status == ErrorCode.Error)
@@ -249,12 +291,15 @@ namespace GLP.Basecode.API.Voting.Manager
                 }
 
 
-                if (model.CandidateImage is not null )
-                    opRes.SuccessMessage = "Candidate image successfully udpated.";
-                else if (model.PositionId is not null)
+                if (model.CandidateImage is not null && model.NewPositionId is not null)
+                    opRes.SuccessMessage = "Candidate image and position successfully udpated.";
+                else if (model.NewPositionId is not null)
                     opRes.SuccessMessage = "Candidate position successfully udpated.";
                 else
-                    opRes.SuccessMessage = "Candidate image and position successfully udpated.";
+                    opRes.SuccessMessage = "Candidate image successfully udpated.";
+
+
+                await transaction.CommitAsync();
 
                 opRes.Status = ErrorCode.Success;
                 return opRes;

@@ -29,7 +29,7 @@
         Success,
         NotFound,
         Duplicate,
-        GenericError
+        BadRequest
     }
     
 }
