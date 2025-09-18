@@ -1,18 +1,18 @@
-using GLP.Basecode.API.Voting.Services;
+using GLP.Basecode.API.BLL.Services;
 using Microsoft.EntityFrameworkCore;
-using GLP.Basecode.API.Voting.Repository;
-using GLP.Basecode.API.Voting.Manager;
+using GLP.Basecode.API.DAL.DAC.Repository;
+using GLP.Basecode.API.BLL.Managers;
+using GLP.Basecode.API.Helper;
 using GLP.Basecode.API.Voting;
-using GLP.Basecode.API.Voting.Handler;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using System.Security.Claims;
+using GLP.Basecode.API.DAL.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 
 // Register JWT settings
@@ -35,9 +35,9 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings.Issuer,
-        ValidAudience = jwtSettings.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key)),
+        ValidIssuer = jwtSettings?.Issuer ?? string.Empty,
+        ValidAudience = jwtSettings?.Audience ?? string.Empty,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings?.Key ?? string.Empty )),
         RoleClaimType = ClaimTypes.Role 
     };
 
@@ -88,9 +88,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
 // Stateless utility class: safe to use transient
-builder.Services.AddTransient<MailManager>();
-builder.Services.AddTransient<ImageFileManager>();
-builder.Services.AddTransient<ExceptionHandlerMessage>();
+builder.Services.AddTransient<EmailService>();
+builder.Services.AddTransient<ImageFileHelper>();
+builder.Services.AddTransient<ExceptionMessageHelper>();
 
 
 // Manager classes: correctly scoped
@@ -104,7 +104,7 @@ builder.Services.AddScoped(typeof(BaseRepository<>));
 
 
 // Register DbContext
-builder.Services.AddDbContext<VotingAppDbContext>(options =>
+builder.Services.AddDbContext<VotingContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); 
 
 var app = builder.Build();

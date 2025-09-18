@@ -21,4 +21,9 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GLP.Basecode.API.BLL\GLP.Basecode.API.BLL.csproj" />
+    <ProjectReference Include="..\GLP.Basecode.API.DAL\GLP.Basecode.API.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

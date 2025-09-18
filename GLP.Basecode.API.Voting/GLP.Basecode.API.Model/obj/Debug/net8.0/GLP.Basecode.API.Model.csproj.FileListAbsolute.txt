@@ -1,0 +1,13 @@
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\bin\Debug\net8.0\GLP.Basecode.API.Model.deps.json
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\bin\Debug\net8.0\GLP.Basecode.API.Model.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\bin\Debug\net8.0\GLP.Basecode.API.Model.pdb
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.AssemblyInfoInputs.cache
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.AssemblyInfo.cs
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.csproj.CoreCompileInputs.cache
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.sourcelink.json
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\refint\GLP.Basecode.API.Model.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.pdb
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\ref\GLP.Basecode.API.Model.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Model\obj\Debug\net8.0\GLP.Basecode.API.Model.csproj.AssemblyReference.cache

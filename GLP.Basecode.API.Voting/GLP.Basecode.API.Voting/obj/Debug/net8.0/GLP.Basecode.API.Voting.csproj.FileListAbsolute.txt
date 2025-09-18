@@ -340,3 +340,11 @@ C:\Users\Gian Lloyd\Documents\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Vo
 C:\Users\Gian Lloyd\Documents\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\obj\Debug\net8.0\GLP.Basecode.API.Voting.pdb
 C:\Users\Gian Lloyd\Documents\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\obj\Debug\net8.0\GLP.Basecode.API.Voting.genruntimeconfig.cache
 C:\Users\Gian Lloyd\Documents\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\obj\Debug\net8.0\ref\GLP.Basecode.API.Voting.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.BLL.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.DAL.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.Helper.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.Model.dll
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.BLL.pdb
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.DAL.pdb
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.Helper.pdb
+E:\GitHub\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\GLP.Basecode.API.Voting\bin\Debug\net8.0\GLP.Basecode.API.Model.pdb

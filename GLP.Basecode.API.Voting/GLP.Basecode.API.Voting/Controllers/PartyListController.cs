@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using GLP.Basecode.API.Voting.Models.CustomModel;
-using GLP.Basecode.API.Voting.Manager;
-using GLP.Basecode.API.Voting.Constant;
+using GLP.Basecode.API.BLL.Managers;
+using GLP.Basecode.API.BLL.Services;
+using GLP.Basecode.API.Model.Enum;
+using GLP.Basecode.API.Model.ApiModel;
 
 namespace GLP.Basecode.API.Voting.Controllers
 {

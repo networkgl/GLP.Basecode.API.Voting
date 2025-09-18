@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "GLP.Basecode.API.Voting/1.0.0": {
         "dependencies": {
+          "GLP.Basecode.API.BLL": "1.0.0",
+          "GLP.Basecode.API.DAL": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.6",
@@ -1062,6 +1064,50 @@
             "fileVersion": "6.0.21.52210"
           }
         }
+      },
+      "GLP.Basecode.API.BLL/1.0.0": {
+        "dependencies": {
+          "GLP.Basecode.API.DAL": "1.0.0",
+          "GLP.Basecode.API.Helper": "1.0.0",
+          "GLP.Basecode.API.Model": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.Drawing.Common": "8.0.0"
+        },
+        "runtime": {
+          "GLP.Basecode.API.BLL.dll": {}
+        }
+      },
+      "GLP.Basecode.API.DAL/1.0.0": {
+        "dependencies": {
+          "GLP.Basecode.API.Helper": "1.0.0",
+          "GLP.Basecode.API.Model": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.Drawing.Common": "8.0.0"
+        },
+        "runtime": {
+          "GLP.Basecode.API.DAL.dll": {}
+        }
+      },
+      "GLP.Basecode.API.Helper/1.0.0": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.Drawing.Common": "8.0.0"
+        },
+        "runtime": {
+          "GLP.Basecode.API.Helper.dll": {}
+        }
+      },
+      "GLP.Basecode.API.Model/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.Drawing.Common": "8.0.0"
+        },
+        "runtime": {
+          "GLP.Basecode.API.Model.dll": {}
+        }
       }
     }
   },
@@ -1637,6 +1683,26 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "GLP.Basecode.API.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GLP.Basecode.API.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GLP.Basecode.API.Helper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GLP.Basecode.API.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

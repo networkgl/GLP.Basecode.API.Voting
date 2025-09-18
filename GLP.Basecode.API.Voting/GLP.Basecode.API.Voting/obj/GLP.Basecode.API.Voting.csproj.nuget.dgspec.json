@@ -4,6 +4,319 @@
     "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj": {}
   },
   "projects": {
+    "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.BLL\\GLP.Basecode.API.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.BLL\\GLP.Basecode.API.BLL.csproj",
+        "projectName": "GLP.Basecode.API.BLL",
+        "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.BLL\\GLP.Basecode.API.BLL.csproj",
+        "packagesPath": "C:\\Users\\Gian Lloyd\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gian Lloyd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj"
+              },
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj"
+              },
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj",
+        "projectName": "GLP.Basecode.API.DAL",
+        "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj",
+        "packagesPath": "C:\\Users\\Gian Lloyd\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gian Lloyd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj"
+              },
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj",
+        "projectName": "GLP.Basecode.API.Helper",
+        "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\GLP.Basecode.API.Helper.csproj",
+        "packagesPath": "C:\\Users\\Gian Lloyd\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Helper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gian Lloyd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj",
+        "projectName": "GLP.Basecode.API.Model",
+        "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\GLP.Basecode.API.Model.csproj",
+        "packagesPath": "C:\\Users\\Gian Lloyd\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gian Lloyd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +341,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.BLL\\GLP.Basecode.API.BLL.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.BLL\\GLP.Basecode.API.BLL.csproj"
+              },
+              "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj": {
+                "projectPath": "E:\\GitHub\\GLP.Basecode.API.Voting\\GLP.Basecode.API.Voting\\GLP.Basecode.API.DAL\\GLP.Basecode.API.DAL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

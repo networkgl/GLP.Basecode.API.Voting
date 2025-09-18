@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using GLP.Basecode.API.Voting.Models.CustomModel;
-using GLP.Basecode.API.Voting.Manager;
+using GLP.Basecode.API.BLL.Managers;
+using GLP.Basecode.API.BLL.Services;
+using GLP.Basecode.API.Model.Enum;
+using GLP.Basecode.API.Model.ApiModel;
 using System.Threading.Tasks;
-using GLP.Basecode.API.Voting.Constant;
-using GLP.Basecode.API.Voting.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -35,19 +35,19 @@ namespace GLP.Basecode.API.Voting.Controllers
         {
             var retVal = await _accManager.CheckUserCredentials(model);
 
-            if (retVal.Result != LoginResult.Success)
+            if (retVal.Status != ErrorCode.Success)
             {
-                return retVal.Result switch
+                return retVal.Status switch
                 {
-                    LoginResult.UserNotFound => NotFound(new { success = false, message = retVal.Message }),
-                    LoginResult.InvalidPassword => Unauthorized(new { success = false, message = retVal.Message }),
+                    ErrorCode.NotFound => NotFound(new { success = false, message = retVal.ErrorMessage }),
+                    ErrorCode.Error => Unauthorized(new { success = false, message = retVal.ErrorMessage }),
                     _ => StatusCode(500, new { success = false, message = "Unknown error occurred." })
                 };
             }
 
             var user = await _accManager.GetUserByUsername(model.Username);
             if (user is null)
-                return NotFound(new { success = false, message = retVal.Message });
+                return NotFound(new { success = false, message = retVal.ErrorMessage });
 
 
             // Build token
@@ -76,7 +76,7 @@ namespace GLP.Basecode.API.Voting.Controllers
             return Ok(new
             {
                 success = true,
-                message = retVal.Message,
+                message = retVal.SuccessMessage,
                 token = tokenString
             });
         }
@@ -97,12 +97,11 @@ namespace GLP.Basecode.API.Voting.Controllers
         {
             var retVal = await _accManager.CreateStudentAccount(model);
 
-            return retVal.Result switch
+            return retVal.Status switch
             {
-                AccountCreationResult.Success => Ok(new { success = true, message = retVal.Message }),
-                AccountCreationResult.DuplicateIdNumber => Conflict(new { success = false, message = retVal.Message }),
-                AccountCreationResult.DuplicateEmail => Conflict(new { success = false, message = retVal.Message }),
-                AccountCreationResult.Error => StatusCode(500, new { success = false, message = retVal.Message }),
+                ErrorCode.Success => Ok(new { success = true, message = retVal.ErrorMessage }),
+                ErrorCode.Duplicate => Conflict(new { success = false, message = retVal.ErrorMessage }),
+                ErrorCode.Error => StatusCode(500, new { success = false, message = retVal.ErrorMessage }),
                 _ => StatusCode(500, new { success = false, message = "Unknown error occurred." })
             };
         }
